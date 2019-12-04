@@ -18,6 +18,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         setButtons()
+        addObserver()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = true
     }
 
     private func setButtons() {
@@ -28,6 +33,27 @@ class ViewController: UIViewController {
         for button in customButtons {
             button.makeShadow()
             button.layer.cornerRadius = button.frame.width / 20
+        }
+    }
+}
+
+extension ViewController {
+    private func addObserver() {
+        NotificationCenter.default.addObserver(self, selector: #selector(goNextView(_:)), name: .clickMainButton, object: nil)
+    }
+    
+    @objc func goNextView(_ notification: NSNotification) {
+        guard let clickedButton = notification.userInfo?["button"] as? CustomButton else { return }
+        switch clickedButton {
+        case customerButton:
+            guard let customerController = self.storyboard?.instantiateViewController(withIdentifier: "CustomerTabController") as? UITabBarController else { return }
+            self.navigationController?.pushViewController(customerController, animated: true)
+        case trainerButton:
+            print("trainerButton")
+        case adminButton:
+            print("adminButton")
+        default:
+            print("default")
         }
     }
 }

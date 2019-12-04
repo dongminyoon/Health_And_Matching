@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Pa0-5X-ipH">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="H&amp;M" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dc1-nh-7NY">
-                                <rect key="frame" x="94.5" y="174" width="225" height="74"/>
+                                <rect key="frame" x="94.5" y="218" width="225" height="74"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="62"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -56,6 +56,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="grA-aw-hCZ"/>
                     <connections>
                         <outlet property="adminButton" destination="zMb-9s-ggd" id="bV5-vb-U0Q"/>
                         <outlet property="customerButton" destination="Vce-as-kQJ" id="7Eg-nj-KAT"/>
@@ -67,7 +68,140 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="805.79710144927537" y="129.91071428571428"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="DyO-Av-rF8">
+            <objects>
+                <viewController storyboardIdentifier="CustomerController" id="6GO-nc-Uhp" customClass="CustomerController" customModule="Health_And_Matching" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="U2x-A7-fFP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="qh3-m3-PqA">
+                                <rect key="frame" x="30" y="385" width="354" height="328"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LWy-iU-3PV" customClass="CustomButton" customModule="Health_And_Matching" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="76"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CVZ-Oj-BLR" customClass="CustomButton" customModule="Health_And_Matching" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="126" width="354" height="76"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QQT-Gw-b4d" customClass="CustomButton" customModule="Health_And_Matching" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="252" width="354" height="76"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="CVZ-Oj-BLR" firstAttribute="height" secondItem="LWy-iU-3PV" secondAttribute="height" id="0FH-ik-GO7"/>
+                                    <constraint firstItem="QQT-Gw-b4d" firstAttribute="height" secondItem="LWy-iU-3PV" secondAttribute="height" id="9Og-iP-Wyu"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Customer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NId-Ns-dcj">
+                                <rect key="frame" x="108.5" y="174" width="197" height="51.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="43"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="NId-Ns-dcj" firstAttribute="centerX" secondItem="Kac-ru-dhf" secondAttribute="centerX" id="1nT-88-d1H"/>
+                            <constraint firstItem="Kac-ru-dhf" firstAttribute="trailing" secondItem="qh3-m3-PqA" secondAttribute="trailing" constant="30" id="4ne-aY-tb4"/>
+                            <constraint firstItem="NId-Ns-dcj" firstAttribute="top" secondItem="Kac-ru-dhf" secondAttribute="top" constant="130" id="Ay4-Rj-QCL"/>
+                            <constraint firstItem="qh3-m3-PqA" firstAttribute="height" secondItem="U2x-A7-fFP" secondAttribute="height" multiplier="0.366071" id="XQA-V4-ywc"/>
+                            <constraint firstItem="qh3-m3-PqA" firstAttribute="leading" secondItem="Kac-ru-dhf" secondAttribute="leading" constant="30" id="vD7-mo-AOd"/>
+                            <constraint firstItem="Kac-ru-dhf" firstAttribute="bottom" secondItem="qh3-m3-PqA" secondAttribute="bottom" constant="100" id="ydJ-KO-aRu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Kac-ru-dhf"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="path" id="6Ov-hW-zDu"/>
+                    <connections>
+                        <outlet property="applyButton" destination="LWy-iU-3PV" id="nHN-2g-bAt"/>
+                        <outlet property="informationButton" destination="QQT-Gw-b4d" id="HTn-be-A6K"/>
+                        <outlet property="myRoutineButton" destination="CVZ-Oj-BLR" id="pYQ-vF-SHn"/>
+                        <outletCollection property="customButtons" destination="QQT-Gw-b4d" collectionClass="NSMutableArray" id="SbM-N4-K44"/>
+                        <outletCollection property="customButtons" destination="CVZ-Oj-BLR" collectionClass="NSMutableArray" id="CCj-4B-N7N"/>
+                        <outletCollection property="customButtons" destination="LWy-iU-3PV" collectionClass="NSMutableArray" id="VLI-aP-so2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nAj-lK-fHB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2498.5507246376815" y="129.91071428571428"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="9p5-Ce-Ya6">
+            <objects>
+                <viewController id="kzq-e9-agh" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PDW-eC-Uyg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="sl2-Q0-xTC"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J9l-24-Jy6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3313" y="130"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="CDA-jO-NDH">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Pa0-5X-ipH" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4n3-sM-E6I">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="3MM-8C-E2b"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vjA-6x-jVv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
             <point key="canvasLocation" x="-104.34782608695653" y="129.91071428571428"/>
         </scene>
+        <!--Customer Tabbar Controller-->
+        <scene sceneID="vj5-XL-OIO">
+            <objects>
+                <tabBarController storyboardIdentifier="CustomerTabController" automaticallyAdjustsScrollViewInsets="NO" id="Jeo-iu-UdH" customClass="CustomerTabbarController" customModule="Health_And_Matching" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="CF4-aY-xzx">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="6GO-nc-Uhp" kind="relationship" relationship="viewControllers" id="SFI-go-c4U"/>
+                        <segue destination="xqH-mp-td8" kind="relationship" relationship="viewControllers" id="EGl-Rf-G16"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bS9-kw-hqe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1589.8550724637682" y="129.91071428571428"/>
+        </scene>
+        <!--Dictionary-->
+        <scene sceneID="ziR-Wk-kM0">
+            <objects>
+                <viewController id="xqH-mp-td8" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="w3U-G1-fVn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="R02-NT-zhf"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Dictionary" image="book" catalog="system" id="Q6F-KE-pyy"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kC9-My-G9h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2499" y="824"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="book" catalog="system" width="64" height="50"/>
+        <image name="path" width="21" height="21"/>
+    </resources>
 </document>

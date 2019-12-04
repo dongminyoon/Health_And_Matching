@@ -17,6 +17,10 @@
 		9D5262B223980E9E004C6374 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5262B123980E9E004C6374 /* CustomButton.swift */; };
 		9D5262B523980EB7004C6374 /* CustomButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D5262B423980EB7004C6374 /* CustomButton.xib */; };
 		9D5262B723981444004C6374 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5262B623981444004C6374 /* UIView+Extension.swift */; };
+		9D5262B923981B43004C6374 /* NSNotifcation+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5262B823981B43004C6374 /* NSNotifcation+Extension.swift */; };
+		9D5262BB23981CCA004C6374 /* CustomerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5262BA23981CCA004C6374 /* CustomerController.swift */; };
+		9D5262BD239825DB004C6374 /* CustomerTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5262BC239825DB004C6374 /* CustomerTabbarController.swift */; };
+		9D5262BF23982DE1004C6374 /* TrainerListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5262BE23982DE1004C6374 /* TrainerListController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +36,10 @@
 		9D5262B123980E9E004C6374 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		9D5262B423980EB7004C6374 /* CustomButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomButton.xib; sourceTree = "<group>"; };
 		9D5262B623981444004C6374 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		9D5262B823981B43004C6374 /* NSNotifcation+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSNotifcation+Extension.swift"; sourceTree = "<group>"; };
+		9D5262BA23981CCA004C6374 /* CustomerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerController.swift; sourceTree = "<group>"; };
+		9D5262BC239825DB004C6374 /* CustomerTabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerTabbarController.swift; sourceTree = "<group>"; };
+		9D5262BE23982DE1004C6374 /* TrainerListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerListController.swift; sourceTree = "<group>"; };
 		DB733AC10D162D02B65E10D3 /* Pods-Health_And_Matching.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Health_And_Matching.debug.xcconfig"; path = "Target Support Files/Pods-Health_And_Matching/Pods-Health_And_Matching.debug.xcconfig"; sourceTree = "<group>"; };
 		E391E357CA75AB1152157769 /* Pods_Health_And_Matching.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Health_And_Matching.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -120,6 +128,9 @@
 			isa = PBXGroup;
 			children = (
 				9D5262992398093E004C6374 /* ViewController.swift */,
+				9D5262BA23981CCA004C6374 /* CustomerController.swift */,
+				9D5262BC239825DB004C6374 /* CustomerTabbarController.swift */,
+				9D5262BE23982DE1004C6374 /* TrainerListController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -143,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				9D5262B623981444004C6374 /* UIView+Extension.swift */,
+				9D5262B823981B43004C6374 /* NSNotifcation+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -282,9 +294,13 @@
 			files = (
 				9D5262B223980E9E004C6374 /* CustomButton.swift in Sources */,
 				9D52629A2398093E004C6374 /* ViewController.swift in Sources */,
+				9D5262BF23982DE1004C6374 /* TrainerListController.swift in Sources */,
 				9D5262962398093E004C6374 /* AppDelegate.swift in Sources */,
+				9D5262BD239825DB004C6374 /* CustomerTabbarController.swift in Sources */,
+				9D5262B923981B43004C6374 /* NSNotifcation+Extension.swift in Sources */,
 				9D5262B723981444004C6374 /* UIView+Extension.swift in Sources */,
 				9D5262982398093E004C6374 /* SceneDelegate.swift in Sources */,
+				9D5262BB23981CCA004C6374 /* CustomerController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

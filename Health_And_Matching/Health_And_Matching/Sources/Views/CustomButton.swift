@@ -47,5 +47,7 @@ extension CustomButton {
         view?.backgroundColor = .white
         arrowImage.tintColor = .black
         buttonLabel.textColor = .black
+        NotificationCenter.default.post(name: .clickMainButton, object: nil, userInfo: ["button": self])
+        NotificationCenter.default.post(name: .clickCustomerMyPageButton, object: nil, userInfo: ["button": self])
     }
 }
