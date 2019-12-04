@@ -1,0 +1,6 @@
+framework module Pods_Health_And_Matching {
+  umbrella header "Pods-Health_And_Matching-umbrella.h"
+
+  export *
+  module * { export * }
+}
