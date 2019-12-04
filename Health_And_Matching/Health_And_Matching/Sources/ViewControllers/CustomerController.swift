@@ -42,7 +42,8 @@ extension CustomerController {
         guard let clickedButton = notification.userInfo?["button"] as? CustomButton else { return }
         switch clickedButton {
         case applyButton:
-            print("applyButton")
+            guard let trainerListController = self.storyboard?.instantiateViewController(identifier: "TrainerListController") as? TrainerListController else { return }
+            self.navigationController?.pushViewController(trainerListController, animated: true)
         case myRoutineButton:
             print("MyRoutineButton")
         case informationButton:

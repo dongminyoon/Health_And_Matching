@@ -21,6 +21,11 @@
 		9D5262BB23981CCA004C6374 /* CustomerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5262BA23981CCA004C6374 /* CustomerController.swift */; };
 		9D5262BD239825DB004C6374 /* CustomerTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5262BC239825DB004C6374 /* CustomerTabbarController.swift */; };
 		9D5262BF23982DE1004C6374 /* TrainerListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5262BE23982DE1004C6374 /* TrainerListController.swift */; };
+		9D5262C12398302E004C6374 /* Trainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5262C02398302E004C6374 /* Trainer.swift */; };
+		9D5262C3239831DF004C6374 /* TrainerTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5262C2239831DF004C6374 /* TrainerTableCell.swift */; };
+		9D5262C5239834E2004C6374 /* TrainerList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5262C4239834E2004C6374 /* TrainerList.swift */; };
+		9D5262C72398367D004C6374 /* TrainerInformController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5262C62398367D004C6374 /* TrainerInformController.swift */; };
+		9D5262C923983D27004C6374 /* InputInformController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5262C823983D27004C6374 /* InputInformController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +45,11 @@
 		9D5262BA23981CCA004C6374 /* CustomerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerController.swift; sourceTree = "<group>"; };
 		9D5262BC239825DB004C6374 /* CustomerTabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerTabbarController.swift; sourceTree = "<group>"; };
 		9D5262BE23982DE1004C6374 /* TrainerListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerListController.swift; sourceTree = "<group>"; };
+		9D5262C02398302E004C6374 /* Trainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trainer.swift; sourceTree = "<group>"; };
+		9D5262C2239831DF004C6374 /* TrainerTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerTableCell.swift; sourceTree = "<group>"; };
+		9D5262C4239834E2004C6374 /* TrainerList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerList.swift; sourceTree = "<group>"; };
+		9D5262C62398367D004C6374 /* TrainerInformController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerInformController.swift; sourceTree = "<group>"; };
+		9D5262C823983D27004C6374 /* InputInformController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputInformController.swift; sourceTree = "<group>"; };
 		DB733AC10D162D02B65E10D3 /* Pods-Health_And_Matching.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Health_And_Matching.debug.xcconfig"; path = "Target Support Files/Pods-Health_And_Matching/Pods-Health_And_Matching.debug.xcconfig"; sourceTree = "<group>"; };
 		E391E357CA75AB1152157769 /* Pods_Health_And_Matching.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Health_And_Matching.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -131,6 +141,8 @@
 				9D5262BA23981CCA004C6374 /* CustomerController.swift */,
 				9D5262BC239825DB004C6374 /* CustomerTabbarController.swift */,
 				9D5262BE23982DE1004C6374 /* TrainerListController.swift */,
+				9D5262C62398367D004C6374 /* TrainerInformController.swift */,
+				9D5262C823983D27004C6374 /* InputInformController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -138,6 +150,8 @@
 		9D5262AC239809BD004C6374 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				9D5262C02398302E004C6374 /* Trainer.swift */,
+				9D5262C4239834E2004C6374 /* TrainerList.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -146,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				9D5262B123980E9E004C6374 /* CustomButton.swift */,
+				9D5262C2239831DF004C6374 /* TrainerTableCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -293,6 +308,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D5262B223980E9E004C6374 /* CustomButton.swift in Sources */,
+				9D5262C5239834E2004C6374 /* TrainerList.swift in Sources */,
 				9D52629A2398093E004C6374 /* ViewController.swift in Sources */,
 				9D5262BF23982DE1004C6374 /* TrainerListController.swift in Sources */,
 				9D5262962398093E004C6374 /* AppDelegate.swift in Sources */,
@@ -301,6 +317,10 @@
 				9D5262B723981444004C6374 /* UIView+Extension.swift in Sources */,
 				9D5262982398093E004C6374 /* SceneDelegate.swift in Sources */,
 				9D5262BB23981CCA004C6374 /* CustomerController.swift in Sources */,
+				9D5262C12398302E004C6374 /* Trainer.swift in Sources */,
+				9D5262C923983D27004C6374 /* InputInformController.swift in Sources */,
+				9D5262C72398367D004C6374 /* TrainerInformController.swift in Sources */,
+				9D5262C3239831DF004C6374 /* TrainerTableCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
