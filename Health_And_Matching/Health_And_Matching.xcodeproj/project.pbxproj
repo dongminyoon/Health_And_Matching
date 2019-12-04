@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,9 @@
 		9D52629D2398093E004C6374 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D52629B2398093E004C6374 /* Main.storyboard */; };
 		9D52629F23980943004C6374 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D52629E23980943004C6374 /* Assets.xcassets */; };
 		9D5262A223980943004C6374 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D5262A023980943004C6374 /* LaunchScreen.storyboard */; };
+		9D5262B223980E9E004C6374 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5262B123980E9E004C6374 /* CustomButton.swift */; };
+		9D5262B523980EB7004C6374 /* CustomButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D5262B423980EB7004C6374 /* CustomButton.xib */; };
+		9D5262B723981444004C6374 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5262B623981444004C6374 /* UIView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		9D52629E23980943004C6374 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9D5262A123980943004C6374 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9D5262A323980943004C6374 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9D5262B123980E9E004C6374 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		9D5262B423980EB7004C6374 /* CustomButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomButton.xib; sourceTree = "<group>"; };
+		9D5262B623981444004C6374 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		DB733AC10D162D02B65E10D3 /* Pods-Health_And_Matching.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Health_And_Matching.debug.xcconfig"; path = "Target Support Files/Pods-Health_And_Matching/Pods-Health_And_Matching.debug.xcconfig"; sourceTree = "<group>"; };
 		E391E357CA75AB1152157769 /* Pods_Health_And_Matching.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Health_And_Matching.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -48,7 +54,6 @@
 				DB733AC10D162D02B65E10D3 /* Pods-Health_And_Matching.debug.xcconfig */,
 				7350BA2D79B7744FF38D7C1B /* Pods-Health_And_Matching.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -105,6 +110,7 @@
 				9D5262AB239809AE004C6374 /* ViewControllers */,
 				9D5262AE239809CE004C6374 /* Extensions */,
 				9D5262AD239809C3004C6374 /* Views */,
+				9D5262B323980EA4004C6374 /* Nibs */,
 				9D5262AC239809BD004C6374 /* Models */,
 			);
 			path = Sources;
@@ -128,6 +134,7 @@
 		9D5262AD239809C3004C6374 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9D5262B123980E9E004C6374 /* CustomButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -135,6 +142,7 @@
 		9D5262AE239809CE004C6374 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				9D5262B623981444004C6374 /* UIView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -146,6 +154,14 @@
 				9D5262A023980943004C6374 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		9D5262B323980EA4004C6374 /* Nibs */ = {
+			isa = PBXGroup;
+			children = (
+				9D5262B423980EB7004C6374 /* CustomButton.xib */,
+			);
+			path = Nibs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,6 +224,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D5262B523980EB7004C6374 /* CustomButton.xib in Resources */,
 				9D5262A223980943004C6374 /* LaunchScreen.storyboard in Resources */,
 				9D52629F23980943004C6374 /* Assets.xcassets in Resources */,
 				9D52629D2398093E004C6374 /* Main.storyboard in Resources */,
@@ -263,8 +280,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D5262B223980E9E004C6374 /* CustomButton.swift in Sources */,
 				9D52629A2398093E004C6374 /* ViewController.swift in Sources */,
 				9D5262962398093E004C6374 /* AppDelegate.swift in Sources */,
+				9D5262B723981444004C6374 /* UIView+Extension.swift in Sources */,
 				9D5262982398093E004C6374 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

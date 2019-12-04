@@ -9,12 +9,26 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var customerButton: CustomButton!
+    @IBOutlet weak var trainerButton: CustomButton!
+    @IBOutlet weak var adminButton: CustomButton!
+    @IBOutlet var customButtons: [CustomButton]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        setButtons()
     }
 
-
+    private func setButtons() {
+        customerButton.setButtonLabel("Customer")
+        trainerButton.setButtonLabel("Trainer")
+        adminButton.setButtonLabel("Admin")
+        
+        for button in customButtons {
+            button.makeShadow()
+            button.layer.cornerRadius = button.frame.width / 20
+        }
+    }
 }
 

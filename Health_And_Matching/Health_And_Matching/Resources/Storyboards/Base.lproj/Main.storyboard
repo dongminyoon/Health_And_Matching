@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,64 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Health_And_Matching" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="H&amp;M" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dc1-nh-7NY">
+                                <rect key="frame" x="94.5" y="174" width="225" height="74"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="62"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="Zri-B1-fFQ">
+                                <rect key="frame" x="30" y="384" width="354" height="328"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vce-as-kQJ" customClass="CustomButton" customModule="Health_And_Matching" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="76"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZBw-d9-ekX" customClass="CustomButton" customModule="Health_And_Matching" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="126" width="354" height="76"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zMb-9s-ggd" customClass="CustomButton" customModule="Health_And_Matching" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="252" width="354" height="76"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="ZBw-d9-ekX" firstAttribute="height" secondItem="Vce-as-kQJ" secondAttribute="height" id="EER-9K-Jai"/>
+                                    <constraint firstItem="zMb-9s-ggd" firstAttribute="height" secondItem="Vce-as-kQJ" secondAttribute="height" id="Vgl-nl-ADG"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Zri-B1-fFQ" firstAttribute="centerX" secondItem="Dc1-nh-7NY" secondAttribute="centerX" id="072-0R-tpF"/>
+                            <constraint firstItem="Dc1-nh-7NY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="130" id="4DE-Mk-0JT"/>
+                            <constraint firstItem="Dc1-nh-7NY" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="7o2-yw-619"/>
+                            <constraint firstItem="Dc1-nh-7NY" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.543478" id="CoL-Pe-oPp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Zri-B1-fFQ" secondAttribute="bottom" constant="150" id="Par-qG-L8s"/>
+                            <constraint firstItem="Zri-B1-fFQ" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.366071" id="cmk-GM-Jhl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Zri-B1-fFQ" secondAttribute="trailing" constant="30" id="gn4-Hj-ha6"/>
+                            <constraint firstItem="Zri-B1-fFQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="trE-xz-9hO"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="adminButton" destination="zMb-9s-ggd" id="bV5-vb-U0Q"/>
+                        <outlet property="customerButton" destination="Vce-as-kQJ" id="7Eg-nj-KAT"/>
+                        <outlet property="trainerButton" destination="ZBw-d9-ekX" id="cEt-82-eM2"/>
+                        <outletCollection property="customButtons" destination="Vce-as-kQJ" collectionClass="NSMutableArray" id="kKP-vF-9hl"/>
+                        <outletCollection property="customButtons" destination="ZBw-d9-ekX" collectionClass="NSMutableArray" id="dL4-Ab-GhM"/>
+                        <outletCollection property="customButtons" destination="zMb-9s-ggd" collectionClass="NSMutableArray" id="7MI-Gp-CRZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-104.34782608695653" y="129.91071428571428"/>
         </scene>
     </scenes>
 </document>
