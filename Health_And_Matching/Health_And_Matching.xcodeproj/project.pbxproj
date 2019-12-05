@@ -34,6 +34,7 @@
 		9DF006BB2398FDCB000DBC47 /* DB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF006BA2398FDCB000DBC47 /* DB.swift */; };
 		9DF006BE2398FED8000DBC47 /* WorkoutPart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF006BD2398FED8000DBC47 /* WorkoutPart.swift */; };
 		9DF006C123990029000DBC47 /* DictionaryTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF006C023990029000DBC47 /* DictionaryTableCell.swift */; };
+		9DF006C323990AA8000DBC47 /* WorkoutInformController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF006C223990AA8000DBC47 /* WorkoutInformController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,7 @@
 		9DF006BA2398FDCB000DBC47 /* DB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DB.swift; sourceTree = "<group>"; };
 		9DF006BD2398FED8000DBC47 /* WorkoutPart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutPart.swift; sourceTree = "<group>"; };
 		9DF006C023990029000DBC47 /* DictionaryTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryTableCell.swift; sourceTree = "<group>"; };
+		9DF006C223990AA8000DBC47 /* WorkoutInformController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutInformController.swift; sourceTree = "<group>"; };
 		DB733AC10D162D02B65E10D3 /* Pods-Health_And_Matching.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Health_And_Matching.debug.xcconfig"; path = "Target Support Files/Pods-Health_And_Matching/Pods-Health_And_Matching.debug.xcconfig"; sourceTree = "<group>"; };
 		E391E357CA75AB1152157769 /* Pods_Health_And_Matching.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Health_And_Matching.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -163,6 +165,7 @@
 				9D5262C62398367D004C6374 /* TrainerInformController.swift */,
 				9D5262C823983D27004C6374 /* InputInformController.swift */,
 				9D5262D12398EC93004C6374 /* DictionaryController.swift */,
+				9DF006C223990AA8000DBC47 /* WorkoutInformController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -358,6 +361,7 @@
 				9DF006C123990029000DBC47 /* DictionaryTableCell.swift in Sources */,
 				9DF006BE2398FED8000DBC47 /* WorkoutPart.swift in Sources */,
 				9D5262CD2398E5D7004C6374 /* UIViewController+Extension.swift in Sources */,
+				9DF006C323990AA8000DBC47 /* WorkoutInformController.swift in Sources */,
 				9D5262B223980E9E004C6374 /* CustomButton.swift in Sources */,
 				9D5262C5239834E2004C6374 /* TrainerList.swift in Sources */,
 				9D52629A2398093E004C6374 /* ViewController.swift in Sources */,

@@ -10,13 +10,13 @@ import UIKit
 
 class DictionaryController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
-    // 여기에 Workout Data 넣기 ==> Network에서 가져오는 것 처럼 구현, 일단은 Defualt 값
+    // 여기에 Workout Dictionary Data 넣기 ==> Network에서 가져오는 것 처럼 구현, 일단은 Defualt 값
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        tableView.dataSource = self
         tableView.delegate = self
+        tableView.dataSource = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -55,8 +55,11 @@ extension DictionaryController: UITableViewDelegate {
         return workoutPart.getHeader()
     }
     
-    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        <#code#>
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let workoutInformController = self.storyboard?.instantiateViewController(identifier: "workoutInformController") as? WorkoutInformController else { return }
+//        workoutInformController.setLabels(<#T##name: String##String#>, <#T##part: String##String#>, <#T##kcal: String##String#>, <#T##youtubeLink: String##String#>, <#T##description: String##String#>)
+//        workoutInformController.setWorkoutImage(UIImage())
+        self.navigationController?.pushViewController(workoutInformController, animated: true)
     }
 }
 
