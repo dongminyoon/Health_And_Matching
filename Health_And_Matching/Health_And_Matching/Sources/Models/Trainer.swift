@@ -12,8 +12,14 @@ class Trainer {
     private var profileImage: UIImage?
     private var name: String?
     private var sex: String?
-    private var age: Int?
+    private var age: String?
     private var height: String?
     private var weight: String?
     private var career: String?
+    
+    private var applicantCustomer: [Customer] = []
+    
+    func addApplicant(_ customer: Customer) {
+        applicantCustomer.append(customer)
+    }
 }

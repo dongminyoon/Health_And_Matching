@@ -21,6 +21,10 @@ class CustomerController: UIViewController {
         addObserver()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = false
+    }
+    
     private func setButtons() {
         applyButton.setButtonLabel("신청하기")
         myRoutineButton.setButtonLabel("마이 루틴")
