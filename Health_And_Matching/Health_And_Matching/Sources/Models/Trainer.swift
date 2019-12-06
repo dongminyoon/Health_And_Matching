@@ -16,9 +16,12 @@ class Trainer {
     var height: String
     var weight: String
     var career: String
+    var applyStatus: ApplyStatus
     var applicantCustomer: [Customer] = []
+    var manageCutsomer: [Customer] = []
     
-    init(_ profileImage: UIImage?, _ name: String, _ sex: String, _ age: String, _ height: String, _ weight: String, _ career: String) {
+    
+    init(_ profileImage: UIImage?, _ name: String, _ sex: String, _ age: String, _ height: String, _ weight: String, _ career: String, _ applyStatus: ApplyStatus) {
         self.profileImage = profileImage
         self.name = name
         self.sex = sex
@@ -26,9 +29,14 @@ class Trainer {
         self.height = height
         self.weight = weight
         self.career = career
+        self.applyStatus = applyStatus
     }
     
     func addApplicant(_ customer: Customer) {
         applicantCustomer.append(customer)
+    }
+    
+    func addCustomer(_ customer: Customer) {
+        manageCutsomer.append(customer)
     }
 }

@@ -27,15 +27,15 @@ class InputInformController: UIViewController {
         guard let name = nameTextField.text, let age = ageTextField.text,
                    let height = heightTextField.text, let weight = weightTextField.text,
                    let request = requestTextField.text else { return }
-        var sex: String
+        let sex: String
         if sexSegment.selectedSegmentIndex == 0 { sex = "남자" }
         else { sex = "여자" }
         
         if name == "" || age == "" || height == "" || weight == "" {
             self.presentAlertView(title: "빈 칸을 채워주세요", message: "모든 입력 창을 입력해주세요")
-            return
+        } else {
+            let customerApplicant = Customer(name, age, sex, height, weight, request, .applied)
+            self.navigationController?.popToViewController(navigationController!.viewControllers[1], animated: true)
         }
-        let customerApplicant = Customer(name, age, sex, height, weight, request, .applied)
-        self.navigationController?.popToViewController(navigationController!.viewControllers[1], animated: true)
     }
 }
