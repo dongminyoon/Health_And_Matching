@@ -30,6 +30,13 @@
 		9D5262CF2398EC22004C6374 /* ApplyStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5262CE2398EC22004C6374 /* ApplyStatus.swift */; };
 		9D5262D22398EC93004C6374 /* DictionaryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5262D12398EC93004C6374 /* DictionaryController.swift */; };
 		9DCE7BA0239A432C00886315 /* ManagementListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCE7B9F239A432C00886315 /* ManagementListController.swift */; };
+		9DCE7BA2239A458500886315 /* ManageCustomerTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCE7BA1239A458500886315 /* ManageCustomerTableCell.swift */; };
+		9DCE7BA4239A48E300886315 /* MakeRoutineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCE7BA3239A48E300886315 /* MakeRoutineController.swift */; };
+		9DCE7BA6239A6AB900886315 /* DictionaryTableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCE7BA5239A6AB900886315 /* DictionaryTableDataSource.swift */; };
+		9DCE7BA8239A6B8900886315 /* RoutineTableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCE7BA7239A6B8900886315 /* RoutineTableDataSource.swift */; };
+		9DCE7BAA239A6DB900886315 /* RoutineTableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCE7BA9239A6DB900886315 /* RoutineTableDelegate.swift */; };
+		9DCE7BAC239A6DEA00886315 /* DictionaryTableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCE7BAB239A6DE900886315 /* DictionaryTableDelegate.swift */; };
+		9DCE7BAE239A6F8500886315 /* RoutineDictionaryTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCE7BAD239A6F8500886315 /* RoutineDictionaryTableCell.swift */; };
 		9DD471C1239927A400E7B7E2 /* TrainerTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD471C0239927A400E7B7E2 /* TrainerTabbarController.swift */; };
 		9DD471C3239928AE00E7B7E2 /* TrainerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD471C2239928AE00E7B7E2 /* TrainerController.swift */; };
 		9DD471C52399E76E00E7B7E2 /* InputTrainerInformController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD471C42399E76E00E7B7E2 /* InputTrainerInformController.swift */; };
@@ -69,6 +76,13 @@
 		9D5262CE2398EC22004C6374 /* ApplyStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplyStatus.swift; sourceTree = "<group>"; };
 		9D5262D12398EC93004C6374 /* DictionaryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryController.swift; sourceTree = "<group>"; };
 		9DCE7B9F239A432C00886315 /* ManagementListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagementListController.swift; sourceTree = "<group>"; };
+		9DCE7BA1239A458500886315 /* ManageCustomerTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageCustomerTableCell.swift; sourceTree = "<group>"; };
+		9DCE7BA3239A48E300886315 /* MakeRoutineController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeRoutineController.swift; sourceTree = "<group>"; };
+		9DCE7BA5239A6AB900886315 /* DictionaryTableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryTableDataSource.swift; sourceTree = "<group>"; };
+		9DCE7BA7239A6B8900886315 /* RoutineTableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineTableDataSource.swift; sourceTree = "<group>"; };
+		9DCE7BA9239A6DB900886315 /* RoutineTableDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineTableDelegate.swift; sourceTree = "<group>"; };
+		9DCE7BAB239A6DE900886315 /* DictionaryTableDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryTableDelegate.swift; sourceTree = "<group>"; };
+		9DCE7BAD239A6F8500886315 /* RoutineDictionaryTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineDictionaryTableCell.swift; sourceTree = "<group>"; };
 		9DD471C0239927A400E7B7E2 /* TrainerTabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerTabbarController.swift; sourceTree = "<group>"; };
 		9DD471C2239928AE00E7B7E2 /* TrainerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerController.swift; sourceTree = "<group>"; };
 		9DD471C42399E76E00E7B7E2 /* InputTrainerInformController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTrainerInformController.swift; sourceTree = "<group>"; };
@@ -184,6 +198,7 @@
 				9DD471C6239A28A400E7B7E2 /* CustomerApplicantController.swift */,
 				9DD471CA239A334000E7B7E2 /* CustomerInformController.swift */,
 				9DCE7B9F239A432C00886315 /* ManagementListController.swift */,
+				9DCE7BA3239A48E300886315 /* MakeRoutineController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -256,6 +271,12 @@
 				9D5262C2239831DF004C6374 /* TrainerTableCell.swift */,
 				9DF006C023990029000DBC47 /* DictionaryTableCell.swift */,
 				9DD471C8239A2E1E00E7B7E2 /* CustomerApplicantTableCell.swift */,
+				9DCE7BA1239A458500886315 /* ManageCustomerTableCell.swift */,
+				9DCE7BA5239A6AB900886315 /* DictionaryTableDataSource.swift */,
+				9DCE7BAB239A6DE900886315 /* DictionaryTableDelegate.swift */,
+				9DCE7BA7239A6B8900886315 /* RoutineTableDataSource.swift */,
+				9DCE7BA9239A6DB900886315 /* RoutineTableDelegate.swift */,
+				9DCE7BAD239A6F8500886315 /* RoutineDictionaryTableCell.swift */,
 			);
 			path = TableView;
 			sourceTree = "<group>";
@@ -379,8 +400,10 @@
 				9DF006C123990029000DBC47 /* DictionaryTableCell.swift in Sources */,
 				9DF006BE2398FED8000DBC47 /* WorkoutPart.swift in Sources */,
 				9D5262CD2398E5D7004C6374 /* UIViewController+Extension.swift in Sources */,
+				9DCE7BA6239A6AB900886315 /* DictionaryTableDataSource.swift in Sources */,
 				9DF006C323990AA8000DBC47 /* WorkoutInformController.swift in Sources */,
 				9DD471C1239927A400E7B7E2 /* TrainerTabbarController.swift in Sources */,
+				9DCE7BAE239A6F8500886315 /* RoutineDictionaryTableCell.swift in Sources */,
 				9D5262B223980E9E004C6374 /* CustomButton.swift in Sources */,
 				9D52629A2398093E004C6374 /* ViewController.swift in Sources */,
 				9D5262BF23982DE1004C6374 /* TrainerListController.swift in Sources */,
@@ -389,9 +412,12 @@
 				9DCE7BA0239A432C00886315 /* ManagementListController.swift in Sources */,
 				9DD471C7239A28A400E7B7E2 /* CustomerApplicantController.swift in Sources */,
 				9D5262BD239825DB004C6374 /* CustomerTabbarController.swift in Sources */,
+				9DCE7BA2239A458500886315 /* ManageCustomerTableCell.swift in Sources */,
 				9DD471C3239928AE00E7B7E2 /* TrainerController.swift in Sources */,
 				9D5262CB2398E224004C6374 /* Customer.swift in Sources */,
 				9D5262B923981B43004C6374 /* NSNotifcation+Extension.swift in Sources */,
+				9DCE7BA4239A48E300886315 /* MakeRoutineController.swift in Sources */,
+				9DCE7BAC239A6DEA00886315 /* DictionaryTableDelegate.swift in Sources */,
 				9DF006B92398FD36000DBC47 /* Workout.swift in Sources */,
 				9D5262B723981444004C6374 /* UIView+Extension.swift in Sources */,
 				9D5262982398093E004C6374 /* SceneDelegate.swift in Sources */,
@@ -401,7 +427,9 @@
 				9D5262D22398EC93004C6374 /* DictionaryController.swift in Sources */,
 				9DD471CB239A334000E7B7E2 /* CustomerInformController.swift in Sources */,
 				9D5262C12398302E004C6374 /* Trainer.swift in Sources */,
+				9DCE7BA8239A6B8900886315 /* RoutineTableDataSource.swift in Sources */,
 				9D5262C923983D27004C6374 /* InputInformController.swift in Sources */,
+				9DCE7BAA239A6DB900886315 /* RoutineTableDelegate.swift in Sources */,
 				9DD471C52399E76E00E7B7E2 /* InputTrainerInformController.swift in Sources */,
 				9D5262C72398367D004C6374 /* TrainerInformController.swift in Sources */,
 				9D5262C3239831DF004C6374 /* TrainerTableCell.swift in Sources */,

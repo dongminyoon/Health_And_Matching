@@ -39,12 +39,6 @@ extension DictionaryController: UITableViewDataSource {
         // cell.setLabel ==> Index별로 다르게 뜨게 수정
         return cell
     }
-}
-
-extension DictionaryController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 120
-    }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         // 0번 : Chest 가슴
@@ -54,7 +48,13 @@ extension DictionaryController: UITableViewDelegate {
         guard let workoutPart = WorkoutPart(rawValue: section) else { return nil }
         return workoutPart.getHeader()
     }
-    
+}
+
+extension DictionaryController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 120
+    }
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let workoutInformController = self.storyboard?.instantiateViewController(identifier: "workoutInformController") as? WorkoutInformController else { return }
 //        workoutInformController.setLabels(<#T##name: String##String#>, <#T##part: String##String#>, <#T##kcal: String##String#>, <#T##youtubeLink: String##String#>, <#T##description: String##String#>)

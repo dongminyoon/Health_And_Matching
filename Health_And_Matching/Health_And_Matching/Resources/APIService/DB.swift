@@ -39,5 +39,4 @@ class DB {
         trainerList.append(trainer2)
         trainerList.append(trainer3)
     }
-    
 }
