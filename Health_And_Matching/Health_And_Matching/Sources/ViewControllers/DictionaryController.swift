@@ -10,7 +10,8 @@ import UIKit
 
 class DictionaryController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
-    // 여기에 Workout Dictionary Data 넣기 ==> Network에서 가져오는 것 처럼 구현, 일단은 Defualt 값
+    private let workoutDictionary: Dictionary<WorkoutPart, [Workout]> = DB.shared.workoutDictionary
+    // DB에서 받아오는 과정은 핸들러 거치게 코딩 ==> 다시 하기
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,13 +32,20 @@ extension DictionaryController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        guard let workoutPart = WorkoutPart(rawValue: section) else { return 0 }
+        guard let workoutList = workoutDictionary[workoutPart] else { return 0 }
+        return workoutList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "dictionaryCell") as? DictionaryTableCell else { return UITableViewCell() }
+        guard let dictionaryTableCell = tableView.dequeueReusableCell(withIdentifier: "dictionaryCell") as? DictionaryTableCell else { return UITableViewCell() }
         // cell.setLabel ==> Index별로 다르게 뜨게 수정
-        return cell
+        guard let workoutPart = WorkoutPart(rawValue: indexPath.section) else { return UITableViewCell() }
+        guard let workout = workoutDictionary[workoutPart]?[indexPath.row] else { return UITableViewCell() }
+        
+        dictionaryTableCell.setLabels(name: workout.name, kcal: workout.consumeKcal)
+        dictionaryTableCell.setWorkoutImage(image: workout.profileImage)
+        return dictionaryTableCell
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -57,8 +65,9 @@ extension DictionaryController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let workoutInformController = self.storyboard?.instantiateViewController(identifier: "workoutInformController") as? WorkoutInformController else { return }
-//        workoutInformController.setLabels(<#T##name: String##String#>, <#T##part: String##String#>, <#T##kcal: String##String#>, <#T##youtubeLink: String##String#>, <#T##description: String##String#>)
-//        workoutInformController.setWorkoutImage(UIImage())
+        guard let workoutPart = WorkoutPart(rawValue: indexPath.section) else { return }
+        guard let workout = workoutDictionary[workoutPart]?[indexPath.row] else { return }
+        workoutInformController.setWorkoutInform(workout)
         self.navigationController?.pushViewController(workoutInformController, animated: true)
     }
 }

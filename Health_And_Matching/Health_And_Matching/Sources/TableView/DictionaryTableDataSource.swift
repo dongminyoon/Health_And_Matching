@@ -9,9 +9,21 @@
 import UIKit
 
 class DictionaryTableDataSource: NSObject, UITableViewDataSource {
+    private var workoutDictionary: Dictionary<WorkoutPart, [Workout]>?
+    
+    init(_ workoutDictionary: Dictionary<WorkoutPart, [Workout]>) {
+        self.workoutDictionary = workoutDictionary
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // Dictionary Section 당 Row 수만큼 만들게 수정
-        return 3
+        guard let workoutPart = WorkoutPart(rawValue: section) else { return 0 }
+        guard let workoutList = workoutDictionary?[workoutPart] else { return 0 }
+        return workoutList.count
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return WorkoutPart.allCases.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

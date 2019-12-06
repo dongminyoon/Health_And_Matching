@@ -12,11 +12,14 @@ class MakeRoutineController: UIViewController {
     @IBOutlet weak var dictionaryTableView: UITableView!
     @IBOutlet weak var routineTableView: UITableView!
     
+    private var workoutDictionary: Dictionary<WorkoutPart, [Workout]> = DB.shared.workoutDictionary
+    // DB에서 데이터 받아오게 다시 코딩
+    
     // 넘겨줄 고객의 ID을 가지고 있어야함
     // Dictionary 정보 가지고 있어야함
     // 추가된 운동 리스트 가지고 있어야함
     
-    private var dictionaryTableDataSource: DictionaryTableDataSource = DictionaryTableDataSource()
+    private lazy var dictionaryTableDataSource: DictionaryTableDataSource = DictionaryTableDataSource(workoutDictionary)
     private var dictionaryTableDelegate: DictionaryTableDelegate = DictionaryTableDelegate()
     private var routineTableDataSource: RoutineTableDataSource = RoutineTableDataSource()
     private var routineTableDelegate: RoutineTableDelegate = RoutineTableDelegate()

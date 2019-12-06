@@ -12,12 +12,13 @@ class DB {
     static let shared = DB()
     
     var trainerList: [Trainer] = []
-    var workoutDictionary: Dictionary<String, [Workout]> = [:]
+    var workoutDictionary: Dictionary<WorkoutPart, [Workout]> = [:]
     var customerList: [Customer] = []
     
     init() {
         initialCustomer()
         initialTrainer()
+        initialDictionary()
     }
     
     private func initialCustomer() {
@@ -39,4 +40,33 @@ class DB {
         trainerList.append(trainer2)
         trainerList.append(trainer3)
     }
+    
+    private func initialDictionary() {
+        let legWorkout = Workout("스쿼트", part: .leg, consumeKcal: 1.3, url: "https://www.youtube.com/watch?v=IfJcq4LDXKE", profileImage: "leg3")
+        let legWorkout1 = Workout("레그 프레스", part: .leg, consumeKcal: 0.9, url: "https://www.youtube.com/watch?v=hYwJrXpzEfs", profileImage: "leg1")
+        let legWorkout2 = Workout("레그 익스텐션", part: .leg, consumeKcal: 0.9, url: "https://www.youtube.com/watch?v=BsNxEFKNLvY", profileImage: "leg2")
+        
+        let chestWorkout = Workout("체스트 프레스", part: .chest, consumeKcal: 1.4, url: "https://www.youtube.com/watch?v=1pBcQ-77ho4", profileImage: "chest1")
+        let chestWorkout1 = Workout("덤벨 플라이", part: .chest, consumeKcal: 1.36, url: "https://www.youtube.com/watch?v=HcDzxNNrSBo", profileImage: "chest2")
+        let chestWorkout2 = Workout("푸쉬업", part: .chest, consumeKcal: 0.8, url: "https://www.youtube.com/watch?v=-_DUjHxgmWk", profileImage: "chest3")
+        
+        let shoulderWorkout = Workout("덤밸숄더 프레스", part: .shoulder, consumeKcal: 0.36, url: "https://www.youtube.com/watch?v=ywLWbwF42kE", profileImage: "shoulder1")
+        let shoulderWorkout1 = Workout("사이드 레터럴 레이즈", part: .shoulder, consumeKcal: 0.36, url: "https://www.youtube.com/watch?v=dE5be4sTjxM", profileImage: "shoulder2")
+        let shoulderWorkout2 = Workout("바벨 로우", part: .shoulder, consumeKcal: 0.4, url: "https://www.youtube.com/watch?v=4bx17wuyJ2o", profileImage: "shoulder3")
+        
+        let backWorkout = Workout("랫풀다운", part: .back, consumeKcal: 0.7, url: "https://www.youtube.com/watch?v=G11ySWVXA48", profileImage: "back1")
+        let backWorkout1 = Workout("친업", part: .back, consumeKcal: 0.5, url: "https://www.youtube.com/watch?v=WXMCA3umX-w", profileImage: "back2")
+        let backWorkout2 = Workout("원 암 바벨로우", part: .back, consumeKcal: 0.4, url: "https://www.youtube.com/watch?v=m5LO72gdYGQ", profileImage: "back3")
+        
+        let legWorkouts: [Workout] = [legWorkout, legWorkout1, legWorkout2]
+        let chestWorkouts: [Workout] = [chestWorkout, chestWorkout1, chestWorkout2]
+        let shoulderWorkouts: [Workout] = [shoulderWorkout, shoulderWorkout1, shoulderWorkout2]
+        let backWorkouts: [Workout] = [backWorkout, backWorkout1, backWorkout2]
+        
+        workoutDictionary[.leg] = legWorkouts
+        workoutDictionary[.chest] = chestWorkouts
+        workoutDictionary[.back] = backWorkouts
+        workoutDictionary[.shoulder] = shoulderWorkouts
+    }
+
 }

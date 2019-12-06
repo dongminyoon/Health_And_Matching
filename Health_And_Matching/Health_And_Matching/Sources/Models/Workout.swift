@@ -9,15 +9,17 @@
 import Foundation
 
 class Workout {
-    private var name: String
-    private var part: WorkoutPart
-    private var consumeKcal: Int
-    private var url: String
+    var profileImage: String
+    var name: String
+    var part: WorkoutPart
+    var consumeKcal: Float
+    var url: String
     
-    init(_ name: String, part: WorkoutPart, consumeKcal: Int, url: String) {
+    init(_ name: String, part: WorkoutPart, consumeKcal: Float, url: String, profileImage: String) {
         self.name = name
         self.part = part
         self.consumeKcal = consumeKcal
         self.url = url
+        self.profileImage = profileImage
     }
 }

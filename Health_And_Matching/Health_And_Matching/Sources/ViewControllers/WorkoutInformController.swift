@@ -16,26 +16,31 @@ class WorkoutInformController: UIViewController {
     @IBOutlet weak var youtubeLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     
+    private var workout: Workout?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.navigationItem.title = "운동정보"
         self.navigationController?.navigationBar.topItem?.title = ""
+        setInitialView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.navigationBar.isHidden = false
     }
     
-    func setLabels(_ name: String, _ part: String, _ kcal: String, _ youtubeLink: String, _ description: String) {
-        nameLabel.text = name
-        partLabel.text = part
-        kcalLabel.text = kcal
-        youtubeLabel.text = youtubeLink
-        descriptionLabel.text = description
+    private func setInitialView() {
+        guard let workout = self.workout else { return }
+        guard let image = UIImage(named: workout.profileImage) else { return }
+        workoutImage.image = image
+        nameLabel.text = workout.name
+        partLabel.text = workout.part.getHeader()
+        kcalLabel.text = "\(workout.consumeKcal)"
+        youtubeLabel.text = workout.url
     }
     
-    func setWorkoutImage(_ image: UIImage) {
-        workoutImage.image = image
+    func setWorkoutInform(_ workout: Workout) {
+        self.workout = workout
     }
 }

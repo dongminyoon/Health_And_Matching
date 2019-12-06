@@ -24,12 +24,13 @@ class DictionaryTableCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setLabels(name: String, kcal: String) {
+    func setLabels(name: String, kcal: Float) {
         nameLabel.text = name
-        kcalLabel.text = kcal
+        kcalLabel.text = "\(kcal)"
     }
 
-    func setWorkoutImage(image: UIImage) {
+    func setWorkoutImage(image: String) {
+        guard let image = UIImage(named: image) else { return }
         workoutImage.image = image
     }
 }
