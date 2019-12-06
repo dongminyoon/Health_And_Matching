@@ -29,9 +29,13 @@
 		9D5262CD2398E5D7004C6374 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5262CC2398E5D7004C6374 /* UIViewController+Extension.swift */; };
 		9D5262CF2398EC22004C6374 /* ApplyStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5262CE2398EC22004C6374 /* ApplyStatus.swift */; };
 		9D5262D22398EC93004C6374 /* DictionaryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5262D12398EC93004C6374 /* DictionaryController.swift */; };
+		9DCE7BA0239A432C00886315 /* ManagementListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCE7B9F239A432C00886315 /* ManagementListController.swift */; };
 		9DD471C1239927A400E7B7E2 /* TrainerTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD471C0239927A400E7B7E2 /* TrainerTabbarController.swift */; };
 		9DD471C3239928AE00E7B7E2 /* TrainerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD471C2239928AE00E7B7E2 /* TrainerController.swift */; };
 		9DD471C52399E76E00E7B7E2 /* InputTrainerInformController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD471C42399E76E00E7B7E2 /* InputTrainerInformController.swift */; };
+		9DD471C7239A28A400E7B7E2 /* CustomerApplicantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD471C6239A28A400E7B7E2 /* CustomerApplicantController.swift */; };
+		9DD471C9239A2E1E00E7B7E2 /* CustomerApplicantTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD471C8239A2E1E00E7B7E2 /* CustomerApplicantTableCell.swift */; };
+		9DD471CB239A334000E7B7E2 /* CustomerInformController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD471CA239A334000E7B7E2 /* CustomerInformController.swift */; };
 		9DF006B92398FD36000DBC47 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF006B82398FD36000DBC47 /* Workout.swift */; };
 		9DF006BB2398FDCB000DBC47 /* DB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF006BA2398FDCB000DBC47 /* DB.swift */; };
 		9DF006BE2398FED8000DBC47 /* WorkoutPart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF006BD2398FED8000DBC47 /* WorkoutPart.swift */; };
@@ -64,9 +68,13 @@
 		9D5262CC2398E5D7004C6374 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		9D5262CE2398EC22004C6374 /* ApplyStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplyStatus.swift; sourceTree = "<group>"; };
 		9D5262D12398EC93004C6374 /* DictionaryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryController.swift; sourceTree = "<group>"; };
+		9DCE7B9F239A432C00886315 /* ManagementListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagementListController.swift; sourceTree = "<group>"; };
 		9DD471C0239927A400E7B7E2 /* TrainerTabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerTabbarController.swift; sourceTree = "<group>"; };
 		9DD471C2239928AE00E7B7E2 /* TrainerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerController.swift; sourceTree = "<group>"; };
 		9DD471C42399E76E00E7B7E2 /* InputTrainerInformController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTrainerInformController.swift; sourceTree = "<group>"; };
+		9DD471C6239A28A400E7B7E2 /* CustomerApplicantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerApplicantController.swift; sourceTree = "<group>"; };
+		9DD471C8239A2E1E00E7B7E2 /* CustomerApplicantTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerApplicantTableCell.swift; sourceTree = "<group>"; };
+		9DD471CA239A334000E7B7E2 /* CustomerInformController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerInformController.swift; sourceTree = "<group>"; };
 		9DF006B82398FD36000DBC47 /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		9DF006BA2398FDCB000DBC47 /* DB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DB.swift; sourceTree = "<group>"; };
 		9DF006BD2398FED8000DBC47 /* WorkoutPart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutPart.swift; sourceTree = "<group>"; };
@@ -173,6 +181,9 @@
 				9DD471C0239927A400E7B7E2 /* TrainerTabbarController.swift */,
 				9DD471C2239928AE00E7B7E2 /* TrainerController.swift */,
 				9DD471C42399E76E00E7B7E2 /* InputTrainerInformController.swift */,
+				9DD471C6239A28A400E7B7E2 /* CustomerApplicantController.swift */,
+				9DD471CA239A334000E7B7E2 /* CustomerInformController.swift */,
+				9DCE7B9F239A432C00886315 /* ManagementListController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -244,6 +255,7 @@
 			children = (
 				9D5262C2239831DF004C6374 /* TrainerTableCell.swift */,
 				9DF006C023990029000DBC47 /* DictionaryTableCell.swift */,
+				9DD471C8239A2E1E00E7B7E2 /* CustomerApplicantTableCell.swift */,
 			);
 			path = TableView;
 			sourceTree = "<group>";
@@ -374,6 +386,8 @@
 				9D5262BF23982DE1004C6374 /* TrainerListController.swift in Sources */,
 				9D5262962398093E004C6374 /* AppDelegate.swift in Sources */,
 				9D5262CF2398EC22004C6374 /* ApplyStatus.swift in Sources */,
+				9DCE7BA0239A432C00886315 /* ManagementListController.swift in Sources */,
+				9DD471C7239A28A400E7B7E2 /* CustomerApplicantController.swift in Sources */,
 				9D5262BD239825DB004C6374 /* CustomerTabbarController.swift in Sources */,
 				9DD471C3239928AE00E7B7E2 /* TrainerController.swift in Sources */,
 				9D5262CB2398E224004C6374 /* Customer.swift in Sources */,
@@ -382,8 +396,10 @@
 				9D5262B723981444004C6374 /* UIView+Extension.swift in Sources */,
 				9D5262982398093E004C6374 /* SceneDelegate.swift in Sources */,
 				9DF006BB2398FDCB000DBC47 /* DB.swift in Sources */,
+				9DD471C9239A2E1E00E7B7E2 /* CustomerApplicantTableCell.swift in Sources */,
 				9D5262BB23981CCA004C6374 /* CustomerController.swift in Sources */,
 				9D5262D22398EC93004C6374 /* DictionaryController.swift in Sources */,
+				9DD471CB239A334000E7B7E2 /* CustomerInformController.swift in Sources */,
 				9D5262C12398302E004C6374 /* Trainer.swift in Sources */,
 				9D5262C923983D27004C6374 /* InputInformController.swift in Sources */,
 				9DD471C52399E76E00E7B7E2 /* InputTrainerInformController.swift in Sources */,

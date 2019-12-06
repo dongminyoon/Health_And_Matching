@@ -38,7 +38,7 @@ class InputTrainerInformController: UIViewController {
         if name == "" || age == "" || height == "" || weight == "" || career == "" {
             self.presentAlertView(title: "빈 칸을 채워주세요", message: "모든 입력 창을 입력해주세요")
         } else {
-            let trainerApplicant = Trainer(nil, name, sex, age, height, weight, career, .none)
+            let trainerApplicant = Trainer(nil, name, sex, age, height, weight, career, .applied)
             self.navigationController?.popToViewController((navigationController?.viewControllers[1])!, animated: true)
         }
         

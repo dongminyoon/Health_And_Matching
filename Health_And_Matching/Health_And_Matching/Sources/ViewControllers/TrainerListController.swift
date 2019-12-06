@@ -15,7 +15,7 @@ class TrainerListController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        self.navigationItem.title = "Trainer List"
+        self.navigationItem.title = "트레이너 명단"
         tableView.dataSource = self
         tableView.delegate = self
     }

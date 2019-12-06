@@ -45,15 +45,17 @@ extension TrainerController {
     @objc func goNextView(_ notification: NSNotification) {
         guard let clickedButton = notification.userInfo?["button"] as? CustomButton else { return }
         
-        print(clickedButton)
-        
         switch clickedButton {
         case applyButton:
             guard let trainerInformInputController = self.storyboard?.instantiateViewController(identifier: "InputTrainerInformController") as? InputTrainerInformController else { return }
             self.navigationController?.pushViewController(trainerInformInputController, animated: true)
-        case applicantListButton: print("applicatn")
-        case managementButton: print("awd")
-        default: print("default")
+        case applicantListButton:
+            guard let customerApplicantListController = self.storyboard?.instantiateViewController(identifier: "CustomerApplicantListController") as? CustomerApplicantListController else { return }
+            self.navigationController?.pushViewController(customerApplicantListController, animated: true)
+        case managementButton:
+            guard let managementListController = self.storyboard?.instantiateViewController(withIdentifier: "ManagementListController") as? ManagementListController else { return }
+            self.navigationController?.pushViewController(managementListController, animated: true)
+        default: return
         }
     }
 }
