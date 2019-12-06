@@ -22,5 +22,11 @@ class RoutineDictionaryTableCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
         // Configure the view for the selected state
     }
-
+    
+    func setLabels(name: String, kcal: Float, image: String) {
+        guard let image = UIImage(named: image) else { return }
+        workoutImage.image = image
+        nameLabel.text = name
+        kcalLabel.text = "\(kcal)"
+    }
 }
