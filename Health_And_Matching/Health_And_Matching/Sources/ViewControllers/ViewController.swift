@@ -49,7 +49,8 @@ extension ViewController {
             guard let customerController = self.storyboard?.instantiateViewController(withIdentifier: "CustomerTabController") as? UITabBarController else { return }
             self.navigationController?.pushViewController(customerController, animated: true)
         case trainerButton:
-            print("trainerButton")
+            guard let trainerController = self.storyboard?.instantiateViewController(identifier: "TrainerTabController") as? UITabBarController else { return }
+            self.navigationController?.pushViewController(trainerController, animated: true)
         case adminButton:
             print("adminButton")
         default:

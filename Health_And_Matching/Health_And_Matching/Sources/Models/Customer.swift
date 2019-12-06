@@ -9,19 +9,21 @@
 import Foundation
 
 class Customer {
-    private var name: String
-    private var age: String
-    private var sex: String
-    private var height: String
-    private var weight: String
-    private var request: String
+    var name: String
+    var age: String
+    var sex: String
+    var height: String
+    var weight: String
+    var request: String
+    var applyStatus: ApplyStatus
     
-    init(_ name: String, _ age: String, _ sex: String, _ height: String, _ weight: String, _ request: String) {
+    init(_ name: String, _ age: String, _ sex: String, _ height: String, _ weight: String, _ request: String, _ applyStatus: ApplyStatus) {
         self.name = name
         self.age = age
         self.sex = sex
         self.height = height
         self.weight = weight
         self.request = request
+        self.applyStatus = applyStatus
     }
 }

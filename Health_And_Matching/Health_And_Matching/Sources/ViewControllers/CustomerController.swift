@@ -53,7 +53,7 @@ extension CustomerController {
         case informationButton:
             print("information")
         default:
-            print("default")
+            print("nothing")
         }
     }
 }

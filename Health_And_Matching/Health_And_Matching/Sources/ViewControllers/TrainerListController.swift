@@ -10,7 +10,7 @@ import UIKit
 
 class TrainerListController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
-    private var trainerList: TrainerList?
+    private var trainerList: [Trainer] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()

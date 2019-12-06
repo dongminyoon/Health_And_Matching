@@ -11,6 +11,7 @@ import UIKit
 extension NSNotification.Name {
     static let clickMainButton = NSNotification.Name(rawValue: "clickMainCustomButton")
     static let clickCustomerMyPageButton = NSNotification.Name(rawValue: "clickCustomerMyPageButton")
+    static let clickTrainerMyPageButton = NSNotification.Name(rawValue: "clickTrainerMyPageButton")
 }
 
 

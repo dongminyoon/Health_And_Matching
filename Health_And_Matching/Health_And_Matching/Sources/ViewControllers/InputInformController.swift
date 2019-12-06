@@ -35,7 +35,7 @@ class InputInformController: UIViewController {
             self.presentAlertView(title: "빈 칸을 채워주세요", message: "모든 입력 창을 입력해주세요")
             return
         }
-        let customerApplicant = Customer(name, age, sex, height, weight, request)
+        let customerApplicant = Customer(name, age, sex, height, weight, request, .applied)
         self.navigationController?.popToViewController(navigationController!.viewControllers[1], animated: true)
     }
 }
