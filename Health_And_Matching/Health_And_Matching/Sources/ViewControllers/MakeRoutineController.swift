@@ -13,6 +13,9 @@ class MakeRoutineController: UIViewController {
     @IBOutlet weak var routineTableView: UITableView!
     
     private var workoutDictionary: Dictionary<WorkoutPart, [Workout]> = DB.shared.workoutDictionary
+    private var workoutRoutine: [WorkoutRoutine] = []
+    
+    private var addedWorkoutRutine: Dictionary<WorkoutPart, [Workout]> = [:]
     // DB에서 데이터 받아오게 다시 코딩
     
     // 넘겨줄 고객의 ID을 가지고 있어야함

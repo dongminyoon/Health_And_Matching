@@ -7,5 +7,5 @@ target 'Health_And_Matching' do
 
   # Pods for Health_And_Matching
   pod 'Alamofire', '~> 4.8.2'  
-
+  pod "GMStepper"
 end

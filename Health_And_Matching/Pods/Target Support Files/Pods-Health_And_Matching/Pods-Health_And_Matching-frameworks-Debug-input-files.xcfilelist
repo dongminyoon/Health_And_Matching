@@ -1,2 +1,3 @@
 ${PODS_ROOT}/Target Support Files/Pods-Health_And_Matching/Pods-Health_And_Matching-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
+${BUILT_PRODUCTS_DIR}/GMStepper/GMStepper.framework

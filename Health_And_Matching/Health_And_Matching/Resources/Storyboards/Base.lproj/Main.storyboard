@@ -1033,15 +1033,10 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uWZ-ML-G1L">
-                                                    <rect key="frame" x="369" y="38.5" width="25" height="24"/>
-                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="5fg-9p-yu9" firstAttribute="leading" secondItem="iei-HR-dLY" secondAttribute="trailing" constant="30" id="22j-XT-aaB"/>
                                                 <constraint firstItem="iei-HR-dLY" firstAttribute="height" secondItem="VOS-Ag-SP6" secondAttribute="height" multiplier="0.782178" id="6fB-U5-Vvr"/>
-                                                <constraint firstItem="uWZ-ML-G1L" firstAttribute="trailing" secondItem="VOS-Ag-SP6" secondAttribute="trailingMargin" id="73S-Ti-10F"/>
                                                 <constraint firstItem="iei-HR-dLY" firstAttribute="leading" secondItem="VOS-Ag-SP6" secondAttribute="leadingMargin" id="Bja-2R-Efk"/>
                                                 <constraint firstItem="dsy-Kd-QWj" firstAttribute="leading" secondItem="8ek-Bu-g8A" secondAttribute="trailing" constant="8" id="Lhd-Pu-yJg"/>
                                                 <constraint firstItem="5fg-9p-yu9" firstAttribute="top" secondItem="VOS-Ag-SP6" secondAttribute="topMargin" constant="9" id="QY0-aI-iyB"/>
@@ -1049,7 +1044,6 @@
                                                 <constraint firstItem="xxY-7r-Mfy" firstAttribute="leading" secondItem="5fg-9p-yu9" secondAttribute="trailing" constant="8" id="X0v-7z-FvX"/>
                                                 <constraint firstItem="xFH-Hy-8dD" firstAttribute="leading" secondItem="5fg-9p-yu9" secondAttribute="leading" id="cDd-ju-2hd"/>
                                                 <constraint firstItem="8ek-Bu-g8A" firstAttribute="centerY" secondItem="xFH-Hy-8dD" secondAttribute="centerY" id="epe-zm-5Fm"/>
-                                                <constraint firstItem="uWZ-ML-G1L" firstAttribute="centerY" secondItem="VOS-Ag-SP6" secondAttribute="centerY" id="nTl-T7-9K1"/>
                                                 <constraint firstItem="iei-HR-dLY" firstAttribute="centerY" secondItem="VOS-Ag-SP6" secondAttribute="centerY" id="uEc-2j-MmV"/>
                                                 <constraint firstItem="8ek-Bu-g8A" firstAttribute="leading" secondItem="xFH-Hy-8dD" secondAttribute="trailing" constant="8" id="yqH-zn-spd"/>
                                                 <constraint firstItem="dsy-Kd-QWj" firstAttribute="centerY" secondItem="8ek-Bu-g8A" secondAttribute="centerY" id="zHO-2M-Ie5"/>

@@ -37,6 +37,7 @@
 		9DCE7BAA239A6DB900886315 /* RoutineTableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCE7BA9239A6DB900886315 /* RoutineTableDelegate.swift */; };
 		9DCE7BAC239A6DEA00886315 /* DictionaryTableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCE7BAB239A6DE900886315 /* DictionaryTableDelegate.swift */; };
 		9DCE7BAE239A6F8500886315 /* RoutineDictionaryTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCE7BAD239A6F8500886315 /* RoutineDictionaryTableCell.swift */; };
+		9DCE7BD0239BECA400886315 /* WorkoutRoutine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCE7BCF239BECA400886315 /* WorkoutRoutine.swift */; };
 		9DD471C1239927A400E7B7E2 /* TrainerTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD471C0239927A400E7B7E2 /* TrainerTabbarController.swift */; };
 		9DD471C3239928AE00E7B7E2 /* TrainerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD471C2239928AE00E7B7E2 /* TrainerController.swift */; };
 		9DD471C52399E76E00E7B7E2 /* InputTrainerInformController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD471C42399E76E00E7B7E2 /* InputTrainerInformController.swift */; };
@@ -83,6 +84,7 @@
 		9DCE7BA9239A6DB900886315 /* RoutineTableDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineTableDelegate.swift; sourceTree = "<group>"; };
 		9DCE7BAB239A6DE900886315 /* DictionaryTableDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryTableDelegate.swift; sourceTree = "<group>"; };
 		9DCE7BAD239A6F8500886315 /* RoutineDictionaryTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineDictionaryTableCell.swift; sourceTree = "<group>"; };
+		9DCE7BCF239BECA400886315 /* WorkoutRoutine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutRoutine.swift; sourceTree = "<group>"; };
 		9DD471C0239927A400E7B7E2 /* TrainerTabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerTabbarController.swift; sourceTree = "<group>"; };
 		9DD471C2239928AE00E7B7E2 /* TrainerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerController.swift; sourceTree = "<group>"; };
 		9DD471C42399E76E00E7B7E2 /* InputTrainerInformController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTrainerInformController.swift; sourceTree = "<group>"; };
@@ -209,6 +211,7 @@
 				9D5262C02398302E004C6374 /* Trainer.swift */,
 				9D5262CA2398E224004C6374 /* Customer.swift */,
 				9DF006B82398FD36000DBC47 /* Workout.swift */,
+				9DCE7BCF239BECA400886315 /* WorkoutRoutine.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -431,6 +434,7 @@
 				9D5262C923983D27004C6374 /* InputInformController.swift in Sources */,
 				9DCE7BAA239A6DB900886315 /* RoutineTableDelegate.swift in Sources */,
 				9DD471C52399E76E00E7B7E2 /* InputTrainerInformController.swift in Sources */,
+				9DCE7BD0239BECA400886315 /* WorkoutRoutine.swift in Sources */,
 				9D5262C72398367D004C6374 /* TrainerInformController.swift in Sources */,
 				9D5262C3239831DF004C6374 /* TrainerTableCell.swift in Sources */,
 			);
