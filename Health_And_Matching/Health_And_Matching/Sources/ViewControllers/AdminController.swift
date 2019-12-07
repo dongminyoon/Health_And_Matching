@@ -10,21 +10,46 @@ import UIKit
 
 class AdminController: UIViewController {
 
+    @IBOutlet weak var applicantListButton: CustomButton!
+    @IBOutlet weak var trainerListButton: CustomButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        setButtons()
+        addObserver()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.isHidden = false
     }
-    */
+    
+    private func setButtons() {
+        applicantListButton.setButtonLabel("신청자 명단")
+        trainerListButton.setButtonLabel("트레이너 명단")
+        
+        applicantListButton.makeShadow()
+        applicantListButton.layer.cornerRadius = applicantListButton.frame.width / 20
+        trainerListButton.makeShadow()
+        trainerListButton.layer.cornerRadius = trainerListButton.frame.width / 20
+    }
+}
 
+extension AdminController {
+    private func addObserver() {
+        NotificationCenter.default.addObserver(self, selector: #selector(goNextView(_:)), name: .clickAdminMyPageButton, object: nil)
+    }
+    
+    @objc func goNextView(_ notification: NSNotification) {
+        guard let clickedButton = notification.userInfo?["button"] as? CustomButton else { return }
+        
+        switch clickedButton {
+        case applicantListButton:
+            guard let trainerApplicantListController = self.storyboard?.instantiateViewController(identifier: "TrainerApplicantListController") as? TrainerApplicantListController else { return }
+            self.navigationController?.pushViewController(trainerApplicantListController, animated: true)
+        case trainerListButton: print("b")
+        default: return
+        }
+    }
 }

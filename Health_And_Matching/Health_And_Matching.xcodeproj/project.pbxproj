@@ -41,6 +41,8 @@
 		9DCE7BD2239C015C00886315 /* AddedRoutineTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCE7BD1239C015C00886315 /* AddedRoutineTableCell.swift */; };
 		9DCE7BD4239C474D00886315 /* AdminTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCE7BD3239C474D00886315 /* AdminTabbarController.swift */; };
 		9DCE7BD6239C479500886315 /* AdminController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCE7BD5239C479500886315 /* AdminController.swift */; };
+		9DCE7BD8239C4FAB00886315 /* TrainerApplicantListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCE7BD7239C4FAB00886315 /* TrainerApplicantListController.swift */; };
+		9DCE7BDA239C572800886315 /* TrainerApplicantTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCE7BD9239C572800886315 /* TrainerApplicantTableCell.swift */; };
 		9DD471C1239927A400E7B7E2 /* TrainerTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD471C0239927A400E7B7E2 /* TrainerTabbarController.swift */; };
 		9DD471C3239928AE00E7B7E2 /* TrainerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD471C2239928AE00E7B7E2 /* TrainerController.swift */; };
 		9DD471C52399E76E00E7B7E2 /* InputTrainerInformController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD471C42399E76E00E7B7E2 /* InputTrainerInformController.swift */; };
@@ -91,6 +93,8 @@
 		9DCE7BD1239C015C00886315 /* AddedRoutineTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddedRoutineTableCell.swift; sourceTree = "<group>"; };
 		9DCE7BD3239C474D00886315 /* AdminTabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminTabbarController.swift; sourceTree = "<group>"; };
 		9DCE7BD5239C479500886315 /* AdminController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminController.swift; sourceTree = "<group>"; };
+		9DCE7BD7239C4FAB00886315 /* TrainerApplicantListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerApplicantListController.swift; sourceTree = "<group>"; };
+		9DCE7BD9239C572800886315 /* TrainerApplicantTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerApplicantTableCell.swift; sourceTree = "<group>"; };
 		9DD471C0239927A400E7B7E2 /* TrainerTabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerTabbarController.swift; sourceTree = "<group>"; };
 		9DD471C2239928AE00E7B7E2 /* TrainerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerController.swift; sourceTree = "<group>"; };
 		9DD471C42399E76E00E7B7E2 /* InputTrainerInformController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTrainerInformController.swift; sourceTree = "<group>"; };
@@ -209,6 +213,7 @@
 				9DCE7BA3239A48E300886315 /* MakeRoutineController.swift */,
 				9DCE7BD3239C474D00886315 /* AdminTabbarController.swift */,
 				9DCE7BD5239C479500886315 /* AdminController.swift */,
+				9DCE7BD7239C4FAB00886315 /* TrainerApplicantListController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -289,6 +294,7 @@
 				9DCE7BA9239A6DB900886315 /* RoutineTableDelegate.swift */,
 				9DCE7BAD239A6F8500886315 /* RoutineDictionaryTableCell.swift */,
 				9DCE7BD1239C015C00886315 /* AddedRoutineTableCell.swift */,
+				9DCE7BD9239C572800886315 /* TrainerApplicantTableCell.swift */,
 			);
 			path = TableView;
 			sourceTree = "<group>";
@@ -434,12 +440,14 @@
 				9DF006B92398FD36000DBC47 /* Workout.swift in Sources */,
 				9D5262B723981444004C6374 /* UIView+Extension.swift in Sources */,
 				9D5262982398093E004C6374 /* SceneDelegate.swift in Sources */,
+				9DCE7BDA239C572800886315 /* TrainerApplicantTableCell.swift in Sources */,
 				9DF006BB2398FDCB000DBC47 /* DB.swift in Sources */,
 				9DD471C9239A2E1E00E7B7E2 /* CustomerApplicantTableCell.swift in Sources */,
 				9D5262BB23981CCA004C6374 /* CustomerController.swift in Sources */,
 				9D5262D22398EC93004C6374 /* DictionaryController.swift in Sources */,
 				9DD471CB239A334000E7B7E2 /* CustomerInformController.swift in Sources */,
 				9D5262C12398302E004C6374 /* Trainer.swift in Sources */,
+				9DCE7BD8239C4FAB00886315 /* TrainerApplicantListController.swift in Sources */,
 				9DCE7BA8239A6B8900886315 /* RoutineTableDataSource.swift in Sources */,
 				9DCE7BD4239C474D00886315 /* AdminTabbarController.swift in Sources */,
 				9D5262C923983D27004C6374 /* InputInformController.swift in Sources */,

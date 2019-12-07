@@ -14,6 +14,7 @@ class DB {
     var trainerList: [Trainer] = []
     var workoutDictionary: Dictionary<WorkoutPart, [Workout]> = [:]
     var customerList: [Customer] = []
+    var trainerApplicant: [Trainer] = []
     
     init() {
         initialCustomer()
@@ -72,5 +73,8 @@ class DB {
         workoutDictionary[.back] = backWorkouts
         workoutDictionary[.shoulder] = shoulderWorkouts
     }
-
+    
+    func addTrainerApplicant(_ trainer: Trainer) {
+        self.trainerApplicant.append(trainer)
+    }
 }

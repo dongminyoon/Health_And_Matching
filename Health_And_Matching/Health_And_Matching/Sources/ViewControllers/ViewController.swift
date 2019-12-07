@@ -52,9 +52,9 @@ extension ViewController {
             guard let trainerController = self.storyboard?.instantiateViewController(identifier: "TrainerTabController") as? UITabBarController else { return }
             self.navigationController?.pushViewController(trainerController, animated: true)
         case adminButton:
-            print("adminButton")
-        default:
-            print("default")
+            guard let adminController = self.storyboard?.instantiateViewController(identifier: "AdminTabController") as? UITabBarController else { return }
+            self.navigationController?.pushViewController(adminController, animated: true)
+        default: return
         }
     }
 }

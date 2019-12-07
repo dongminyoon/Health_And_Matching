@@ -54,5 +54,6 @@ extension CustomButton {
         NotificationCenter.default.post(name: .clickMainButton, object: nil, userInfo: ["button": self])
         NotificationCenter.default.post(name: .clickCustomerMyPageButton, object: nil, userInfo: ["button": self])
         NotificationCenter.default.post(name: .clickTrainerMyPageButton, object: nil, userInfo: ["button": self])
+        NotificationCenter.default.post(name: .clickAdminMyPageButton, object: nil, userInfo: ["button": self])
     }
 }

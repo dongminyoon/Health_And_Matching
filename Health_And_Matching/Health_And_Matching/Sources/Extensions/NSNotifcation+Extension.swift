@@ -12,6 +12,7 @@ extension NSNotification.Name {
     static let clickMainButton = NSNotification.Name(rawValue: "clickMainCustomButton")
     static let clickCustomerMyPageButton = NSNotification.Name(rawValue: "clickCustomerMyPageButton")
     static let clickTrainerMyPageButton = NSNotification.Name(rawValue: "clickTrainerMyPageButton")
+    static let clickAdminMyPageButton = NSNotification.Name(rawValue: "clickAdminMyPageButton")
     static let clickMakeRoutineButton = NSNotification.Name(rawValue: "clickMakeRoutineButton")
     static let clickAddButton = NSNotification.Name(rawValue: "clickAddButton")
 }
