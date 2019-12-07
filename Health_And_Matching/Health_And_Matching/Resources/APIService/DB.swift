@@ -33,10 +33,10 @@ class DB {
     }
     
     private func initialTrainer() {
-        let trainer1 = Trainer(nil, "허두영", "남", "22", "189", "90", "생활지도자격증 1급", .accepted)
-        let trainer2 = Trainer(nil, "이석복", "남", "28", "195", "109", "헬스 트레이너 20년", .accepted)
-        let trainer3 = Trainer(nil, "이동환", "남", "21", "168", "70", "축구 U 리그 선수", .accepted)
-        let trainer4 = Trainer(nil, "신주연", "여", "23", "163", "45", "필라테스 지도 3년", .none)
+        let trainer1 = Trainer(nil, "신주연", "여", "23", "163", "45", "필라테스 지도 3년", .none)
+        let trainer2 = Trainer(nil, "허두영", "남", "22", "189", "90", "생활지도자격증 1급", .accepted)
+        let trainer3 = Trainer(nil, "이석복", "남", "28", "195", "109", "헬스 트레이너 20년", .accepted)
+        let trainer4 = Trainer(nil, "이동환", "남", "21", "168", "70", "축구 U 리그 선수", .accepted)
         let trainer5 = Trainer(nil, "용상호", "남", "23", "174", "75", "요가 강사 10년", .accepted)
         trainerList.append(trainer1)
         trainerList.append(trainer2)

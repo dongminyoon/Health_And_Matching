@@ -34,6 +34,10 @@ class CustomButton: UIView {
     func setButtonLabel(_ text: String) {
         buttonLabel.text = text
     }
+    
+    func setBackgroundColor(_ color: UIColor) {
+        self.view?.backgroundColor = color
+    }
 }
 
 extension CustomButton {

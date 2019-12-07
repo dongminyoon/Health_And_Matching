@@ -16,7 +16,7 @@ enum ApplyStatus {
     func getStatus() -> String {
         switch self {
         case .applied: return "신청중"
-        case .accepted: return "매칭중"
+        case .accepted: return "매칭완료"
         case .none: return "신청하기"
         }
     }

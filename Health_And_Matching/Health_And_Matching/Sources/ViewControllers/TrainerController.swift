@@ -14,15 +14,23 @@ class TrainerController: UIViewController {
     @IBOutlet weak var managementButton: CustomButton!
     @IBOutlet var customButtons: [CustomButton]!
     
+    private var trainerID: Trainer?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         setButtons()
         addObserver()
+        getTrainerID()
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        setButtonByStatus()
         self.navigationController?.navigationBar.isHidden = false
+    }
+    
+    private func getTrainerID() {
+        self.trainerID = DB.shared.trainerList[0]
     }
     
     private func setButtons() {
@@ -33,6 +41,34 @@ class TrainerController: UIViewController {
         for button in customButtons {
             button.makeShadow()
             button.layer.cornerRadius = button.frame.width / 20
+        }
+    }
+    
+    private func setButtonByStatus() {
+        guard let trainerID = self.trainerID else { return }
+        applyButton.setButtonLabel(trainerID.applyStatus.getStatus())
+        switch trainerID.applyStatus {
+        case .none:
+            applyButton.isUserInteractionEnabled = true
+            applyButton.setBackgroundColor(.white)
+            applicantListButton.isUserInteractionEnabled = false
+            applicantListButton.setBackgroundColor(.lightGray)
+            managementButton.isUserInteractionEnabled = false
+            managementButton.setBackgroundColor(.lightGray)
+        case .applied:
+            applyButton.isUserInteractionEnabled = false
+            applyButton.setBackgroundColor(.lightGray)
+            applicantListButton.isUserInteractionEnabled = false
+            applicantListButton.setBackgroundColor(.lightGray)
+            managementButton.isUserInteractionEnabled = false
+            managementButton.setBackgroundColor(.lightGray)
+        case .accepted:
+            applyButton.isUserInteractionEnabled = false
+            applyButton.setBackgroundColor(.lightGray)
+            applicantListButton.isUserInteractionEnabled = true
+            applicantListButton.setBackgroundColor(.white)
+            managementButton.isUserInteractionEnabled = true
+            managementButton.setBackgroundColor(.white)
         }
     }
 }
@@ -48,6 +84,8 @@ extension TrainerController {
         switch clickedButton {
         case applyButton:
             guard let trainerInformInputController = self.storyboard?.instantiateViewController(identifier: "InputTrainerInformController") as? InputTrainerInformController else { return }
+            guard let trainerID = self.trainerID else { return }
+            trainerInformInputController.setTrainer(trainerID)
             self.navigationController?.pushViewController(trainerInformInputController, animated: true)
         case applicantListButton:
             guard let customerApplicantListController = self.storyboard?.instantiateViewController(identifier: "CustomerApplicantListController") as? CustomerApplicantListController else { return }

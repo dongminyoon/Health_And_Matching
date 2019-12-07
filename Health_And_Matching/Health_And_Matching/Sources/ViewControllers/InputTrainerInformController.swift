@@ -16,6 +16,8 @@ class InputTrainerInformController: UIViewController {
     @IBOutlet weak var weightTextField: UITextField!
     @IBOutlet weak var careerTextView: UITextView!
     
+    private var trainerID: Trainer?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -29,16 +31,17 @@ class InputTrainerInformController: UIViewController {
         careerTextView.layer.cornerRadius = careerTextView.frame.height / 30
     }
     
+    func setTrainer(_ trainerID: Trainer) {
+        self.trainerID = trainerID
+    }
+    
     @IBAction func completeApply(_ sender: Any) {
-        let sex: String
-        if sexSegment.selectedSegmentIndex == 0 { sex = "남자" }
-        else { sex = "여자" }
         guard let name = nameTextField.text, let age = ageTextField.text, let height = heightTextField.text, let weight = weightTextField.text, let career = careerTextView.text else { return }
         
         if name == "" || age == "" || height == "" || weight == "" || career == "" {
             self.presentAlertView(title: "빈 칸을 채워주세요", message: "모든 입력 창을 입력해주세요")
         } else {
-            let trainerApplicant = Trainer(nil, name, sex, age, height, weight, career, .applied)
+            trainerID?.applyStatus = .applied
             self.navigationController?.popToViewController((navigationController?.viewControllers[1])!, animated: true)
         }
         

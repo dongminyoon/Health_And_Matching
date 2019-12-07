@@ -45,6 +45,7 @@ class InputInformController: UIViewController {
             customerID?.inputRequest(request)
             guard let customerID = self.customerID else { return }
             requestTrainer?.addApplicant(customerID)
+            customerID.applyStatus = .applied
             self.navigationController?.popToViewController(navigationController!.viewControllers[1], animated: true)
         }
     }

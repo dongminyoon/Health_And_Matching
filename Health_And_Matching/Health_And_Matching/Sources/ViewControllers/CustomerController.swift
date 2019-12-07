@@ -19,13 +19,14 @@ class CustomerController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        getCustomerID()
         setButtons()
         addObserver()
-        getCustomerID()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.navigationBar.isHidden = false
+        setButtonByStatus()
     }
     
     private func getCustomerID() {
@@ -40,6 +41,33 @@ class CustomerController: UIViewController {
         for button in customButtons {
             button.layer.cornerRadius = button.frame.width / 20
             button.makeShadow()
+        }
+    }
+    
+    private func setButtonByStatus() {
+        guard let customerID = self.customerID else { return }
+        applyButton.setButtonLabel(customerID.applyStatus.getStatus())
+        if customerID.applyStatus == .none {
+            applyButton.isUserInteractionEnabled = true
+            applyButton.setBackgroundColor(.white)
+            myRoutineButton.isUserInteractionEnabled = false
+            myRoutineButton.setBackgroundColor(.lightGray)
+            informationButton.isUserInteractionEnabled = false
+            informationButton.setBackgroundColor(.lightGray)
+        } else if customerID.applyStatus == .applied {
+            applyButton.isUserInteractionEnabled = false
+            applyButton.setBackgroundColor(.lightGray)
+            myRoutineButton.isUserInteractionEnabled = false
+            myRoutineButton.setBackgroundColor(.lightGray)
+            informationButton.isUserInteractionEnabled = false
+            informationButton.setBackgroundColor(.lightGray)
+        } else {
+            applyButton.isUserInteractionEnabled = false
+            applyButton.setBackgroundColor(.lightGray)
+            myRoutineButton.isUserInteractionEnabled = true
+            myRoutineButton.setBackgroundColor(.white)
+            informationButton.isUserInteractionEnabled = false
+            informationButton.setBackgroundColor(.lightGray)
         }
     }
 }
