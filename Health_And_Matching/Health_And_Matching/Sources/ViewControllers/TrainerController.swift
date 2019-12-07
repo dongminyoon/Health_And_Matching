@@ -64,6 +64,7 @@ class TrainerController: UIViewController {
             managementButton.isUserInteractionEnabled = false
             managementButton.setBackgroundColor(.lightGray)
         case .accepted:
+            applyButton.setButtonLabel("승인완료")
             applyButton.isUserInteractionEnabled = false
             applyButton.setBackgroundColor(.lightGray)
             applicantListButton.isUserInteractionEnabled = true

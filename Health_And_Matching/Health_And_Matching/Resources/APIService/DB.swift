@@ -74,7 +74,17 @@ class DB {
         workoutDictionary[.shoulder] = shoulderWorkouts
     }
     
+    func addTrainer(_ trainer: Trainer) {
+        trainerList.append(trainer)
+    }
+    
     func addTrainerApplicant(_ trainer: Trainer) {
         self.trainerApplicant.append(trainer)
+    }
+    
+    func removeTrainerApplicant(_ trainer: Trainer) {
+        for index in 0..<trainerApplicant.count {
+            if trainer === trainerApplicant[index] { trainerApplicant.remove(at: index) }
+        }
     }
 }
