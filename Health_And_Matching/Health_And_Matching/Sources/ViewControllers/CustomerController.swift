@@ -14,15 +14,22 @@ class CustomerController: UIViewController {
     @IBOutlet weak var informationButton: CustomButton!
     @IBOutlet var customButtons: [CustomButton]!
     
+    private var customerID: Customer?                         // 김동해로 고정
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         setButtons()
         addObserver()
+        getCustomerID()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.navigationBar.isHidden = false
+    }
+    
+    private func getCustomerID() {
+        customerID = DB.shared.customerList[0]
     }
     
     private func setButtons() {
@@ -47,6 +54,8 @@ extension CustomerController {
         switch clickedButton {
         case applyButton:
             guard let trainerListController = self.storyboard?.instantiateViewController(identifier: "TrainerListController") as? TrainerListController else { return }
+            guard let customerID = self.customerID else { return }
+            trainerListController.setCustomer(customerID)
             self.navigationController?.pushViewController(trainerListController, animated: true)
         case myRoutineButton:
             print("MyRoutineButton")

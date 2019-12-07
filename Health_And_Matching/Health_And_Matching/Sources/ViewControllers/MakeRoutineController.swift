@@ -70,7 +70,27 @@ extension MakeRoutineController {
         guard let addedRoutine = notification.userInfo?["workoutRoutine"] as? WorkoutRoutine else { return }
         let newRoutine: WorkoutRoutine = WorkoutRoutine(workout: addedRoutine.workout, eachCount: addedRoutine.eachCount)
         
-        addedWorkoutRoutines[addedRoutine.workout.part]?.append(newRoutine)
+        if newRoutine.eachCount == 0 { return }
+        
+        var markIndex: Int?
+        
+        for (key, _) in addedWorkoutRoutines {
+            guard let eachPartRoutines = addedWorkoutRoutines[key] else { return }
+            for index in 0..<eachPartRoutines.count {
+                if eachPartRoutines[index].workout.name == newRoutine.workout.name {
+                    markIndex = index
+                    break
+                }
+                if markIndex != nil { break }
+            }
+        }
+        
+        if let markIndex = markIndex {
+            addedWorkoutRoutines[addedRoutine.workout.part]?.remove(at: markIndex)
+            addedWorkoutRoutines[addedRoutine.workout.part]?.insert(newRoutine, at: markIndex)
+        } else {
+            addedWorkoutRoutines[addedRoutine.workout.part]?.append(newRoutine)
+        }
         routineTableDataSource.setAddedRoutine(addedWorkoutRoutines)
         routineTableView.reloadData()
     }

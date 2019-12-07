@@ -14,10 +14,10 @@ class Customer {
     var sex: String
     var height: String
     var weight: String
-    var request: String
+    var request: String?
     var applyStatus: ApplyStatus
     
-    init(_ name: String, _ age: String, _ sex: String, _ height: String, _ weight: String, _ request: String, _ applyStatus: ApplyStatus) {
+    init(_ name: String, _ age: String, _ sex: String, _ height: String, _ weight: String, _ request: String?, _ applyStatus: ApplyStatus) {
         self.name = name
         self.age = age
         self.sex = sex
@@ -25,5 +25,9 @@ class Customer {
         self.weight = weight
         self.request = request
         self.applyStatus = applyStatus
+    }
+    
+    func inputRequest(_ request: String) {
+        self.request = request
     }
 }

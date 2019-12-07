@@ -24,10 +24,10 @@ class TrainerTableCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
-    func setLabels(name: String, sex: String, age: Int) {
+    func setLabels(name: String, sex: String, age: String) {
         nameLabel.text = name
         sexLabel.text = sex
-        ageLabel.text = "\(age)"
+        ageLabel.text = age
     }
     
     func setProfileImage(_ image: UIImage) {
