@@ -9,9 +9,9 @@
 import UIKit
 
 class DictionaryTableDataSource: NSObject, UITableViewDataSource {
-    private var workoutDictionary: Dictionary<WorkoutPart, [Workout]>?
+    private var workoutDictionary: Dictionary<WorkoutPart, [WorkoutRoutine]>?
     
-    init(_ workoutDictionary: Dictionary<WorkoutPart, [Workout]>) {
+    init(_ workoutDictionary: Dictionary<WorkoutPart, [WorkoutRoutine]>?) {
         self.workoutDictionary = workoutDictionary
     }
     
@@ -29,9 +29,11 @@ class DictionaryTableDataSource: NSObject, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let routineDictionaryCell = tableView.dequeueReusableCell(withIdentifier: "routineDictionaryCell") as? RoutineDictionaryTableCell else { return UITableViewCell() }
         guard let workoutPart = WorkoutPart(rawValue: indexPath.section) else { return UITableViewCell() }
-        guard let workout = workoutDictionary?[workoutPart]?[indexPath.row] else { return UITableViewCell() }
+        guard let workoutRoutine = workoutDictionary?[workoutPart]?[indexPath.row] else {
+            print("not Data")
+            return UITableViewCell() }
         
-        routineDictionaryCell.setLabels(name: workout.name, kcal: workout.consumeKcal, image: workout.profileImage)
+        routineDictionaryCell.setLabels(workoutRoutine: workoutRoutine)
         return routineDictionaryCell
     }
     

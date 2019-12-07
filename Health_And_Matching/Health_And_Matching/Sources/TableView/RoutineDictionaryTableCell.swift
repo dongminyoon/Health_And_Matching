@@ -7,15 +7,34 @@
 //
 
 import UIKit
+import GMStepper
 
 class RoutineDictionaryTableCell: UITableViewCell {
     @IBOutlet weak var workoutImage: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var kcalLabel: UILabel!
+    @IBOutlet weak var routineCountStepper: GMStepper!
+    @IBOutlet weak var addButton: UIButton!
+    
+    private var workoutRoutine: WorkoutRoutine?
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        setStepper()
+        setButton()
+    }
+    
+    private func setStepper() {
+        routineCountStepper.stepValue = 1
+        routineCountStepper.minimumValue = 0
+        routineCountStepper.maximumValue = 10
+        routineCountStepper.labelFont = UIFont.boldSystemFont(ofSize: 12)
+    }
+    
+    private func setButton() {
+        addButton.layer.cornerRadius = 6
+        addButton.clipsToBounds = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -23,10 +42,16 @@ class RoutineDictionaryTableCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setLabels(name: String, kcal: Float, image: String) {
-        guard let image = UIImage(named: image) else { return }
+    func setLabels(workoutRoutine: WorkoutRoutine) {
+        self.workoutRoutine = workoutRoutine
+        guard let image = UIImage(named: workoutRoutine.workout.profileImage) else { return }
         workoutImage.image = image
-        nameLabel.text = name
-        kcalLabel.text = "\(kcal)"
+        nameLabel.text = workoutRoutine.workout.name
+        kcalLabel.text = "\(workoutRoutine.workout.consumeKcal)"
+        routineCountStepper.value = Double(workoutRoutine.eachCount)
+    }
+    
+    @IBAction func clickStepper(_ sender: Any) {
+        workoutRoutine?.eachCount = Int(routineCountStepper.value)
     }
 }
