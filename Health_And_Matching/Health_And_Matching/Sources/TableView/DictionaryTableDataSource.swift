@@ -29,9 +29,7 @@ class DictionaryTableDataSource: NSObject, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let routineDictionaryCell = tableView.dequeueReusableCell(withIdentifier: "routineDictionaryCell") as? RoutineDictionaryTableCell else { return UITableViewCell() }
         guard let workoutPart = WorkoutPart(rawValue: indexPath.section) else { return UITableViewCell() }
-        guard let workoutRoutine = workoutDictionary?[workoutPart]?[indexPath.row] else {
-            print("not Data")
-            return UITableViewCell() }
+        guard let workoutRoutine = workoutDictionary?[workoutPart]?[indexPath.row] else { return UITableViewCell() }
         
         routineDictionaryCell.setLabels(workoutRoutine: workoutRoutine)
         return routineDictionaryCell

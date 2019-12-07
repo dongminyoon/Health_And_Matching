@@ -54,4 +54,9 @@ class RoutineDictionaryTableCell: UITableViewCell {
     @IBAction func clickStepper(_ sender: Any) {
         workoutRoutine?.eachCount = Int(routineCountStepper.value)
     }
+    
+    @IBAction func clickAddButton(_ sender: Any) {
+        guard let workoutRoutine = self.workoutRoutine else { return }
+        NotificationCenter.default.post(name: .clickAddButton, object: nil, userInfo: ["workoutRoutine": workoutRoutine])
+    }
 }
