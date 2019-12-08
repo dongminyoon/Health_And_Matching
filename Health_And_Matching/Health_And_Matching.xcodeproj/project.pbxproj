@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		30D0AAA2AEF581D3072FB03C /* Pods_Health_And_Matching.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E391E357CA75AB1152157769 /* Pods_Health_And_Matching.framework */; };
+		9D18B95E239CD15300BFC115 /* SystemTrainerTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D18B95D239CD15300BFC115 /* SystemTrainerTableCell.swift */; };
 		9D5262962398093E004C6374 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5262952398093E004C6374 /* AppDelegate.swift */; };
 		9D5262982398093E004C6374 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5262972398093E004C6374 /* SceneDelegate.swift */; };
 		9D52629A2398093E004C6374 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5262992398093E004C6374 /* ViewController.swift */; };
@@ -44,6 +45,8 @@
 		9DCE7BD8239C4FAB00886315 /* TrainerApplicantListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCE7BD7239C4FAB00886315 /* TrainerApplicantListController.swift */; };
 		9DCE7BDA239C572800886315 /* TrainerApplicantTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCE7BD9239C572800886315 /* TrainerApplicantTableCell.swift */; };
 		9DCE7BDC239C5E1700886315 /* TrainerApplicantInformController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCE7BDB239C5E1700886315 /* TrainerApplicantInformController.swift */; };
+		9DCE7BDE239CCA1900886315 /* ManagedTrainerListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCE7BDD239CCA1900886315 /* ManagedTrainerListController.swift */; };
+		9DCE7BE0239CCB6700886315 /* DBHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCE7BDF239CCB6700886315 /* DBHandler.swift */; };
 		9DD471C1239927A400E7B7E2 /* TrainerTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD471C0239927A400E7B7E2 /* TrainerTabbarController.swift */; };
 		9DD471C3239928AE00E7B7E2 /* TrainerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD471C2239928AE00E7B7E2 /* TrainerController.swift */; };
 		9DD471C52399E76E00E7B7E2 /* InputTrainerInformController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD471C42399E76E00E7B7E2 /* InputTrainerInformController.swift */; };
@@ -59,6 +62,7 @@
 
 /* Begin PBXFileReference section */
 		7350BA2D79B7744FF38D7C1B /* Pods-Health_And_Matching.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Health_And_Matching.release.xcconfig"; path = "Target Support Files/Pods-Health_And_Matching/Pods-Health_And_Matching.release.xcconfig"; sourceTree = "<group>"; };
+		9D18B95D239CD15300BFC115 /* SystemTrainerTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemTrainerTableCell.swift; sourceTree = "<group>"; };
 		9D5262922398093E004C6374 /* Health_And_Matching.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Health_And_Matching.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D5262952398093E004C6374 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D5262972398093E004C6374 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +101,8 @@
 		9DCE7BD7239C4FAB00886315 /* TrainerApplicantListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerApplicantListController.swift; sourceTree = "<group>"; };
 		9DCE7BD9239C572800886315 /* TrainerApplicantTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerApplicantTableCell.swift; sourceTree = "<group>"; };
 		9DCE7BDB239C5E1700886315 /* TrainerApplicantInformController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerApplicantInformController.swift; sourceTree = "<group>"; };
+		9DCE7BDD239CCA1900886315 /* ManagedTrainerListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedTrainerListController.swift; sourceTree = "<group>"; };
+		9DCE7BDF239CCB6700886315 /* DBHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBHandler.swift; sourceTree = "<group>"; };
 		9DD471C0239927A400E7B7E2 /* TrainerTabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerTabbarController.swift; sourceTree = "<group>"; };
 		9DD471C2239928AE00E7B7E2 /* TrainerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerController.swift; sourceTree = "<group>"; };
 		9DD471C42399E76E00E7B7E2 /* InputTrainerInformController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTrainerInformController.swift; sourceTree = "<group>"; };
@@ -217,6 +223,7 @@
 				9DCE7BD5239C479500886315 /* AdminController.swift */,
 				9DCE7BD7239C4FAB00886315 /* TrainerApplicantListController.swift */,
 				9DCE7BDB239C5E1700886315 /* TrainerApplicantInformController.swift */,
+				9DCE7BDD239CCA1900886315 /* ManagedTrainerListController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -280,6 +287,7 @@
 			isa = PBXGroup;
 			children = (
 				9DF006BA2398FDCB000DBC47 /* DB.swift */,
+				9DCE7BDF239CCB6700886315 /* DBHandler.swift */,
 			);
 			path = APIService;
 			sourceTree = "<group>";
@@ -298,6 +306,7 @@
 				9DCE7BAD239A6F8500886315 /* RoutineDictionaryTableCell.swift */,
 				9DCE7BD1239C015C00886315 /* AddedRoutineTableCell.swift */,
 				9DCE7BD9239C572800886315 /* TrainerApplicantTableCell.swift */,
+				9D18B95D239CD15300BFC115 /* SystemTrainerTableCell.swift */,
 			);
 			path = TableView;
 			sourceTree = "<group>";
@@ -439,6 +448,7 @@
 				9D5262CB2398E224004C6374 /* Customer.swift in Sources */,
 				9D5262B923981B43004C6374 /* NSNotifcation+Extension.swift in Sources */,
 				9DCE7BA4239A48E300886315 /* MakeRoutineController.swift in Sources */,
+				9DCE7BE0239CCB6700886315 /* DBHandler.swift in Sources */,
 				9DCE7BAC239A6DEA00886315 /* DictionaryTableDelegate.swift in Sources */,
 				9DF006B92398FD36000DBC47 /* Workout.swift in Sources */,
 				9D5262B723981444004C6374 /* UIView+Extension.swift in Sources */,
@@ -449,6 +459,7 @@
 				9D5262BB23981CCA004C6374 /* CustomerController.swift in Sources */,
 				9D5262D22398EC93004C6374 /* DictionaryController.swift in Sources */,
 				9DD471CB239A334000E7B7E2 /* CustomerInformController.swift in Sources */,
+				9DCE7BDE239CCA1900886315 /* ManagedTrainerListController.swift in Sources */,
 				9D5262C12398302E004C6374 /* Trainer.swift in Sources */,
 				9DCE7BD8239C4FAB00886315 /* TrainerApplicantListController.swift in Sources */,
 				9DCE7BA8239A6B8900886315 /* RoutineTableDataSource.swift in Sources */,
@@ -457,6 +468,7 @@
 				9DCE7BAA239A6DB900886315 /* RoutineTableDelegate.swift in Sources */,
 				9DD471C52399E76E00E7B7E2 /* InputTrainerInformController.swift in Sources */,
 				9DCE7BDC239C5E1700886315 /* TrainerApplicantInformController.swift in Sources */,
+				9D18B95E239CD15300BFC115 /* SystemTrainerTableCell.swift in Sources */,
 				9DCE7BD0239BECA400886315 /* WorkoutRoutine.swift in Sources */,
 				9D5262C72398367D004C6374 /* TrainerInformController.swift in Sources */,
 				9DCE7BD2239C015C00886315 /* AddedRoutineTableCell.swift in Sources */,

@@ -32,6 +32,9 @@ class MakeRoutineController: UIViewController {
         addObserver()
         initWorkoutDictionary()
         initTableViews()
+        routineTableView.layer.cornerRadius = routineTableView.frame.width / 20
+        routineTableView.layer.borderWidth = 3
+        routineTableView.layer.borderColor = UIColor.black.cgColor
         dictionaryTableView.reloadData()
         routineTableView.reloadData()
     }

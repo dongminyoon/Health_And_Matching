@@ -11,6 +11,8 @@ import UIKit
 class CustomerApplicantListController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
+    private var trainerID: Trainer?
+    
     // Trainer의 Applicant List 가져옴
     private var customerApplicant: [Customer] = []
     
@@ -21,16 +23,23 @@ class CustomerApplicantListController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
     }
+    
+    func setTrainer(_ trainer: Trainer) {
+        self.trainerID = trainer
+    }
 }
 
 extension CustomerApplicantListController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        guard let trainerApplicants = trainerID?.applicantCustomer else { return 0 }
+        return trainerApplicants.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "applicantCell") as? CustomerApplicantTableCell else { return UITableViewCell() }
-        return cell
+        guard let customerApplicantCell = tableView.dequeueReusableCell(withIdentifier: "applicantCell") as? CustomerApplicantTableCell else { return UITableViewCell() }
+        guard let customerApplicant = self.trainerID?.applicantCustomer[indexPath.row] else { return UITableViewCell() }
+        customerApplicantCell.setLabels(name: customerApplicant.name, sex: customerApplicant.sex, age: customerApplicant.age)
+        return customerApplicantCell
     }
 }
 

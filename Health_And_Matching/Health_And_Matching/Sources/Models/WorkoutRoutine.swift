@@ -11,7 +11,7 @@ import Foundation
 class WorkoutRoutine {
     var workout: Workout
     var eachCount: Int
-
+    
     init(workout: Workout, eachCount: Int) {
         self.workout = workout
         self.eachCount = eachCount

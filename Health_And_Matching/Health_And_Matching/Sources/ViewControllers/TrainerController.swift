@@ -91,6 +91,8 @@ extension TrainerController {
             self.navigationController?.pushViewController(trainerInformInputController, animated: true)
         case applicantListButton:
             guard let customerApplicantListController = self.storyboard?.instantiateViewController(identifier: "CustomerApplicantListController") as? CustomerApplicantListController else { return }
+            guard let trainerID = self.trainerID else { return }
+            customerApplicantListController.setTrainer(trainerID)
             self.navigationController?.pushViewController(customerApplicantListController, animated: true)
         case managementButton:
             guard let managementListController = self.storyboard?.instantiateViewController(withIdentifier: "ManagementListController") as? ManagementListController else { return }

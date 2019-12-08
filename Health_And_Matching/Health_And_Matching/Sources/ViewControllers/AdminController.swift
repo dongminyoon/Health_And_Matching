@@ -48,7 +48,9 @@ extension AdminController {
         case applicantListButton:
             guard let trainerApplicantListController = self.storyboard?.instantiateViewController(identifier: "TrainerApplicantListController") as? TrainerApplicantListController else { return }
             self.navigationController?.pushViewController(trainerApplicantListController, animated: true)
-        case trainerListButton: print("b")
+        case trainerListButton:
+            guard let managedTrainerListController = self.storyboard?.instantiateViewController(identifier: "ManagedTrainerListController") as? ManagedTrainerListController else { return }
+            self.navigationController?.pushViewController(managedTrainerListController, animated: true)
         default: return
         }
     }

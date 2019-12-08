@@ -20,4 +20,12 @@ enum ApplyStatus {
         case .none: return "신청하기"
         }
     }
+    
+    func getTrainerApplyStatus() -> String {
+        switch self {
+        case .applied: return "승인 중"
+        case .accepted: return "승인 완료"
+        case .none: return "승인 필요"
+        }
+    }
 }
