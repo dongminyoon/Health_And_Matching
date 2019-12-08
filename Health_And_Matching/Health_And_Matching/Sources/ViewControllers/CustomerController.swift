@@ -80,15 +80,17 @@ extension CustomerController {
     
     @objc func goNextView(_ notification: NSNotification) {
         guard let clickedButton = notification.userInfo?["button"] as? CustomButton else { return }
+        guard let customerID = self.customerID else { return }
+        
         switch clickedButton {
         case applyButton:
             guard let trainerListController = self.storyboard?.instantiateViewController(identifier: "TrainerListController") as? TrainerListController else { return }
-            guard let customerID = self.customerID else { return }
+//            guard let customerID = self.customerID else { return }
             trainerListController.setCustomer(customerID)
             self.navigationController?.pushViewController(trainerListController, animated: true)
         case myRoutineButton:
             guard let myRoutineController = self.storyboard?.instantiateViewController(identifier: "MyRoutineController") as? MyRoutineController else { return }
-            
+            myRoutineController.setCustomer(customerID)
             self.navigationController?.pushViewController(myRoutineController, animated: true)
         case informationButton:
             print("information")
