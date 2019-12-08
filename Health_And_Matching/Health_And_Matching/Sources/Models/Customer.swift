@@ -16,6 +16,7 @@ class Customer {
     var weight: String
     var request: String?
     var applyStatus: ApplyStatus
+    var routines: Routine?
     
     init(_ name: String, _ age: String, _ sex: String, _ height: String, _ weight: String, _ request: String?, _ applyStatus: ApplyStatus) {
         self.name = name
@@ -29,5 +30,9 @@ class Customer {
     
     func inputRequest(_ request: String) {
         self.request = request
+    }
+    
+    func setRoutines(_ routines: Routine) {
+        self.routines = routines
     }
 }

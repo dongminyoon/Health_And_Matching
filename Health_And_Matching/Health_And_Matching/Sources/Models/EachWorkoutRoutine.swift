@@ -8,7 +8,7 @@
 
 import Foundation
 
-class WorkoutRoutine {
+class EachWorkoutRoutine {
     var workout: Workout
     var eachCount: Int
     

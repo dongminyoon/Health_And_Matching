@@ -20,12 +20,23 @@ class CustomerApplicantListController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.navigationItem.title = "고객 신청 명단"
+        addObserver()
         tableView.dataSource = self
         tableView.delegate = self
     }
     
     func setTrainer(_ trainer: Trainer) {
         self.trainerID = trainer
+    }
+}
+
+extension CustomerApplicantListController {
+    private func addObserver() {
+        NotificationCenter.default.addObserver(self, selector: #selector(removeApplicantCustomer), name: .acceptCustomerApplicant, object: nil)
+    }
+    
+    @objc func removeApplicantCustomer() {
+        tableView.reloadData()
     }
 }
 
@@ -50,6 +61,8 @@ extension CustomerApplicantListController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let customerInformController = self.storyboard?.instantiateViewController(withIdentifier: "CustomerInformController") as? CustomerInformController else { return }
+        guard let trainerID = self.trainerID else { return }
+        customerInformController.setInitData(trainerID, trainerID.applicantCustomer[indexPath.row])
         self.navigationController?.pushViewController(customerInformController, animated: true)
     }
 }

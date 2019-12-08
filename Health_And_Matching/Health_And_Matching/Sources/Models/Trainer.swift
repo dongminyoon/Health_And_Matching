@@ -36,6 +36,15 @@ class Trainer {
         applicantCustomer.append(customer)
     }
     
+    func removeApplicant(_ customer: Customer) {
+        for index in 0..<applicantCustomer.count {
+            if customer === applicantCustomer[index] {
+                applicantCustomer.remove(at: index)
+                return
+            }
+        }
+    }
+    
     func addCustomer(_ customer: Customer) {
         manageCutsomer.append(customer)
     }

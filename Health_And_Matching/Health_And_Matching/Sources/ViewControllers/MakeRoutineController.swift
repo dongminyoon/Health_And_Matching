@@ -11,9 +11,11 @@ import UIKit
 class MakeRoutineController: UIViewController {
     @IBOutlet weak var dictionaryTableView: UITableView!
     @IBOutlet weak var routineTableView: UITableView!
-
-    private var workoutRoutines: Dictionary<WorkoutPart, [WorkoutRoutine]> = [:]
-    private var addedWorkoutRoutines: Dictionary<WorkoutPart, [WorkoutRoutine]> = [:]
+    
+    private var customerID: Customer?
+//
+    private var workoutRoutines: Dictionary<WorkoutPart, [EachWorkoutRoutine]> = [:]
+    private var addedWorkoutRoutines: Dictionary<WorkoutPart, [EachWorkoutRoutine]> = [:]    // 기존에 있던 코드
     // DB에서 데이터 받아오게 다시 코딩
     
     // 넘겨줄 고객의 ID을 가지고 있어야함
@@ -57,10 +59,20 @@ class MakeRoutineController: UIViewController {
         for (key, _) in workoutDictionary {
             guard let dictionaryWorkoutList = workoutDictionary[key] else { return }
             for workout in dictionaryWorkoutList {
-                let workoutRoutine = WorkoutRoutine(workout: workout, eachCount: 0)
+                let workoutRoutine = EachWorkoutRoutine(workout: workout, eachCount: 0)
                 workoutRoutines[key]?.append(workoutRoutine)
             }
         }
+    }
+    
+    func setCustomer(_ customerID: Customer) {
+        self.customerID = customerID
+    }
+    
+    @IBAction func completeMakeRoutine(_ sender: Any) {
+        let makedRoutine = Routine(partRoutine: addedWorkoutRoutines)
+        customerID?.setRoutines(makedRoutine)
+        self.navigationController?.popViewController(animated: true)
     }
 }
 
@@ -70,8 +82,8 @@ extension MakeRoutineController {
     }
     
     @objc func addMakingRoutine(_ notification: NSNotification) {
-        guard let addedRoutine = notification.userInfo?["workoutRoutine"] as? WorkoutRoutine else { return }
-        let newRoutine: WorkoutRoutine = WorkoutRoutine(workout: addedRoutine.workout, eachCount: addedRoutine.eachCount)
+        guard let addedRoutine = notification.userInfo?["workoutRoutine"] as? EachWorkoutRoutine else { return }
+        let newRoutine: EachWorkoutRoutine = EachWorkoutRoutine(workout: addedRoutine.workout, eachCount: addedRoutine.eachCount)
         
         if newRoutine.eachCount == 0 { return }
         

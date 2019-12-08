@@ -16,7 +16,7 @@ class RoutineDictionaryTableCell: UITableViewCell {
     @IBOutlet weak var routineCountStepper: GMStepper!
     @IBOutlet weak var addButton: UIButton!
     
-    private var workoutRoutine: WorkoutRoutine?
+    private var workoutRoutine: EachWorkoutRoutine?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -42,7 +42,7 @@ class RoutineDictionaryTableCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setLabels(workoutRoutine: WorkoutRoutine) {
+    func setLabels(workoutRoutine: EachWorkoutRoutine) {
         self.workoutRoutine = workoutRoutine
         guard let image = UIImage(named: workoutRoutine.workout.profileImage) else { return }
         workoutImage.image = image

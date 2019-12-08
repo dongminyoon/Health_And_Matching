@@ -9,9 +9,9 @@
 import UIKit
 
 class DictionaryTableDataSource: NSObject, UITableViewDataSource {
-    private var workoutDictionary: Dictionary<WorkoutPart, [WorkoutRoutine]>?
+    private var workoutDictionary: Dictionary<WorkoutPart, [EachWorkoutRoutine]>?
     
-    init(_ workoutDictionary: Dictionary<WorkoutPart, [WorkoutRoutine]>?) {
+    init(_ workoutDictionary: Dictionary<WorkoutPart, [EachWorkoutRoutine]>?) {
         self.workoutDictionary = workoutDictionary
     }
     

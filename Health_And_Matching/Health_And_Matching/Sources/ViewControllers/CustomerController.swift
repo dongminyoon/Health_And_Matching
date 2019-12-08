@@ -87,7 +87,9 @@ extension CustomerController {
             trainerListController.setCustomer(customerID)
             self.navigationController?.pushViewController(trainerListController, animated: true)
         case myRoutineButton:
-            print("MyRoutineButton")
+            guard let myRoutineController = self.storyboard?.instantiateViewController(identifier: "MyRoutineController") as? MyRoutineController else { return }
+            
+            self.navigationController?.pushViewController(myRoutineController, animated: true)
         case informationButton:
             print("information")
         default:

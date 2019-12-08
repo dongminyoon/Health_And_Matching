@@ -13,7 +13,7 @@ class AddedRoutineTableCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var eachCountLabel: UILabel!
     
-    private var workoutRoutine: WorkoutRoutine?
+    private var workoutRoutine: EachWorkoutRoutine?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,7 +25,7 @@ class AddedRoutineTableCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setWorkoutRoutine(_ workoutRoutine: WorkoutRoutine) {
+    func setWorkoutRoutine(_ workoutRoutine: EachWorkoutRoutine) {
         self.workoutRoutine = workoutRoutine
         guard let image = UIImage(named: workoutRoutine.workout.profileImage) else { return }
         workoutImage.image = image
